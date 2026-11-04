@@ -550,7 +550,7 @@ document.querySelector(".js-abertura").innerHTML = ABERTURA.map(p =>
 
 document.querySelector(".js-prog").innerHTML = PALESTRAS.map((p, i) =>
   '<details class="item" id="atividade-' + (i+1) + '"><summary><span class="n">' + String(i+1).padStart(2,"0") + '</span>' +
-  '<span class="head">' + avatar(p) + '<span class="ttl"><h3>' + esc(p.tema) + '</h3><span class="who">' + esc(p.nome) + (p.sala ? '<span class="sala-tag">Sala ' + esc(p.sala) + '</span>' : '') + '</span>' + (p.tag ? '<span class="tag">' + esc(p.tag) + '</span>' : '') + '</span></span>' +
+  '<span class="head">' + avatar(p) + '<span class="ttl"><h3>' + esc(p.tema) + '</h3><span class="who">' + esc(p.nome) + (p.sala ? '<span class="sala-tag">' + (/^\d/.test(p.sala) ? 'Sala ' : '') + esc(p.sala) + '</span>' : '') + '</span>' + (p.tag ? '<span class="tag">' + esc(p.tag) + '</span>' : '') + '</span></span>' +
   '<span class="plus" aria-hidden="true">+</span></summary>' +
   '<div class="body"><div><p class="bio">' + esc(p.bio) + '</p>' +
   '<div class="meta"><span><b>Horário</b>' + soon(p.horario) + '</span><span><b>Sala</b>' + soon(p.sala) + '</span>' +
