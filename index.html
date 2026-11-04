@@ -251,7 +251,7 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
   <section class="hero">
     <div class="wrap">
       <div class="hero-text">
-        <span class="label">11 · 12 · 13 NOV 2026 · Faculdade Nove de Julho</span>
+        <span class="label">11 · 12 · 13 NOV 2026 · 19h30 às 21h30 · Faculdade Nove de Julho</span>
         <h1>Nem toda violência deixa marcas <span class="script">visíveis.</span></h1>
         <p class="lead">Três dias para pensar a violência e o lugar da Psicologia diante dela.</p>
         <div class="actions">
@@ -272,9 +272,9 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
 
   <div class="days">
     <div class="wrap">
-      <a class="day" href="#abertura"><span class="d">11/11</span><span class="t">Abertura on-line</span><span class="m">Quarta · transmissão pelo YouTube</span></a>
-      <a class="day" href="#palestras"><span class="d">12/11</span><span class="t">Palestras e minicursos</span><span class="m">Quinta · presencial em Osasco</span></a>
-      <a class="day" href="#trabalhos"><span class="d">13/11</span><span class="t">Apresentação de trabalhos</span><span class="m">Sexta · presencial em Osasco</span></a>
+      <a class="day" href="#abertura"><span class="d">11/11</span><span class="t">Abertura on-line</span><span class="m">Quarta · 19h30 às 21h30 · on-line pelo YouTube</span></a>
+      <a class="day" href="#palestras"><span class="d">12/11</span><span class="t">Palestras e minicursos</span><span class="m">Quinta · 19h30 às 21h30 · presencial em Osasco</span></a>
+      <a class="day" href="#trabalhos"><span class="d">13/11</span><span class="t">Apresentação de trabalhos</span><span class="m">Sexta · 19h30 às 21h30 · presencial em Osasco</span></a>
     </div>
   </div>
 
@@ -306,7 +306,7 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
     <div class="wrap sec">
       <div class="band-grid">
         <div class="sec-head">
-          <span class="label">11 NOV · Quarta · Abertura on-line</span>
+          <span class="label">11 NOV · Quarta · 19h30 às 21h30 · On-line</span>
           <hr class="filete">
           <h2 class="teaser-title">Psicologia, Direitos Humanos e o Enfrentamento às <em>Violências Contemporâneas.</em></h2>
           <p>Três convidadas e convidados abrem a Semana com uma conversa sobre violência de gênero, masculinidades e a rede de proteção às mulheres.</p>
@@ -315,7 +315,7 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
       </div>
       <div class="speakers js-abertura"></div>
       <div class="band-foot">
-        <span><span class="label">Início</span>&nbsp; <span class="js-hora-abertura"></span></span>
+        <span><span class="label">Horário</span>&nbsp; <span class="js-hora-abertura"></span></span>
         <a class="btn js-youtube" href="#" target="_blank" rel="noopener">Transmissão em breve</a>
       </div>
     </div>
@@ -324,7 +324,7 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
   <section id="palestras" class="sec">
     <div class="wrap">
       <div class="sec-head">
-        <span class="label">12 NOV · Quinta · Presencial</span>
+        <span class="label">12 NOV · Quinta · 19h30 às 21h30 · Presencial</span>
         <hr class="filete">
         <h2>Palestras e minicursos.</h2>
         <p>Dez atividades simultâneas em Osasco. Cada uma tem inscrição própria e vagas limitadas à sala. Toque em uma atividade para ler o minicurrículo de quem conduz.</p>
@@ -336,7 +336,7 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
   <section id="trabalhos" class="sec tri">
     <div class="wrap">
       <div class="sec-head">
-        <span class="label">13 NOV · Sexta · Presencial</span>
+        <span class="label">13 NOV · Sexta · 19h30 às 21h30 · Presencial</span>
         <hr class="filete">
         <h2>Apresentação de trabalhos.</h2>
         <p>Estudantes de diferentes semestres apresentam o que desenvolveram com seus professores. A violência é o tema prioritário. Trabalhos de outras temáticas da Psicologia também são aceitos.</p>
@@ -448,7 +448,7 @@ const CONFIG = {
   atualizadoEm: "04/11/2026",
   linkInscricao: "",          // link geral do Sympla
   linkYoutube: "",            // transmissão da abertura 11/11
-  horaAbertura: "",           // ex.: "19h30"
+  horaAbertura: "19h30 às 21h30",           // ex.: "19h30"
   whatsapp: "https://chat.whatsapp.com/JEGQR0wGhSdKlSjoIfVXqn"
 };
 
@@ -457,7 +457,8 @@ const CONFIG = {
 
 /* Avisos: o mais recente primeiro. novo: true mostra o selo "Novo". */
 const AVISOS = [
-  { data: "04/11", novo: true, texto: "Salas das palestras e minicursos de 12/11 publicadas. Toque em cada atividade para ver a sua." },
+  { data: "04/11", novo: true, texto: "Horário confirmado: nos dias 11, 12 e 13 de novembro, as atividades acontecem das 19h30 às 21h30." },
+  { data: "04/11", texto: "Salas das palestras e minicursos de 12/11 publicadas. Toque em cada atividade para ver a sua." },
   { data: "03/11", texto: "Programação de 11, 12 e 13 de novembro publicada. Horários, salas e links de inscrição em breve." },
   { data: "30/10", texto: "Envio de trabalhos encerrado. Quem enviou recebe a devolutiva até 05/11." }
 ];
@@ -470,25 +471,25 @@ const ABERTURA = [
 
 /* Palestras de 12/11: preencha horario, sala e inscricao (link Sympla da atividade). */
 const PALESTRAS = [
-  { foto: "fotos/thamyres.jpg", tema: "Tipos de violência e as consequências no indivíduo", nome: "Thamyres Santos da Cruz", horario: "", sala: "201", inscricao: "",
+  { foto: "fotos/thamyres.jpg", tema: "Tipos de violência e as consequências no indivíduo", nome: "Thamyres Santos da Cruz", horario: "19h30 às 21h30", sala: "201", inscricao: "",
     bio: "Psicóloga pela PUC-SP, com 12 anos de experiência em infância, adolescência e juventude e dez anos na assistência social da cidade de São Paulo. Trabalha com proteção, acolhimento e enfrentamento à violência, com foco nas diretrizes de SAICA e no manejo de casos de violação de direitos. Atua na interface entre Psicologia, Sistema de Garantia de Direitos e Sistema de Justiça, com suporte técnico ao TJSP e ao MPSP." },
-  { foto: "fotos/valeska.jpg", tema: "Esquemas mentais e a criação de crenças que impactam o comportamento do indivíduo", nome: "Valeska da Silva Bohus", horario: "", sala: "301", inscricao: "",
+  { foto: "fotos/valeska.jpg", tema: "Esquemas mentais e a criação de crenças que impactam o comportamento do indivíduo", nome: "Valeska da Silva Bohus", horario: "19h30 às 21h30", sala: "301", inscricao: "",
     bio: "Neuropsicóloga, pedagoga, palestrante e professora do curso de Psicologia da Faculdade Nove de Julho — Osasco. Tem especializações em Neurociências, Neuropsicologia, Terapia Cognitivo-Comportamental, Psicopedagogia Clínica e Institucional e Psicologia Organizacional, com atuação em educação e desenvolvimento humano." },
-  { foto: "fotos/patricia.jpg", tema: "Ciclo da violência: desafios, limites e intervenções", nome: "Patricia Bergantin Soares Paggiaro", horario: "", sala: "502", inscricao: "",
+  { foto: "fotos/patricia.jpg", tema: "Ciclo da violência: desafios, limites e intervenções", nome: "Patricia Bergantin Soares Paggiaro", horario: "19h30 às 21h30", sala: "502", inscricao: "",
     bio: "Doutora em Saúde pela UNG, mestra em Psicologia da Aprendizagem pela UNESP e especialista em Terapia Cognitivo-Comportamental pela USP. Atuou por 16 anos no Tribunal de Justiça de São Paulo, como chefe substituta da seção de Psicologia da Vara da Infância e em avaliações periciais na Vara da Família, além de formar equipes técnicas de SAICAs. Atende em clínica comportamental, avaliação bariátrica e orientação profissional." },
-  { foto: "fotos/ana-leticia.jpg", tema: "Políticas públicas e as rotas de acesso", nome: "Ana Letícia Guedes Pereira", horario: "", sala: "601", inscricao: "",
+  { foto: "fotos/ana-leticia.jpg", tema: "Políticas públicas e as rotas de acesso", nome: "Ana Letícia Guedes Pereira", horario: "19h30 às 21h30", sala: "601", inscricao: "",
     bio: "Psicóloga e mestra em Psicologia Clínica em Família e Comunidade pela PUC-SP, com aprimoramento clínico pela Clínica-Escola Ana Maria Poppovic. Atuou com crianças e adolescentes no Giramundo Oficinas Terapêuticas e tem experiência em tutoria e coordenação de curso. É professora e supervisora de estágio básico social na Faculdade Nove de Julho — Osasco." },
-  { foto: "fotos/gabriela.jpg", tema: "Violência de gênero: impactos nos grupos LGBTQIAPN+", nome: "Gabriela de Souza Rodrigues", horario: "", sala: "Lab I", inscricao: "",
+  { foto: "fotos/gabriela.jpg", tema: "Violência de gênero: impactos nos grupos LGBTQIAPN+", nome: "Gabriela de Souza Rodrigues", horario: "19h30 às 21h30", sala: "Lab I", inscricao: "",
     bio: "Psicóloga pela Universidade Presbiteriana Mackenzie, mestra em Psicologia Social pela USP e especialista em Psicoterapia de Orientação Psicanalítica. Docente da Faculdade Nove de Julho, integra o grupo FRESTA (Fronteiras, Relações e Território: experiências de violência generificada). Seus estudos articulam Psicanálise, violência de gênero, teorias feministas e Psicologia Social." },
-  { foto: "fotos/hulda.jpg", tema: "Violência na escola: o papel do psicólogo na prevenção e no enfrentamento", nome: "Hulda Leia Santana de Almeida", horario: "", sala: "702", inscricao: "",
+  { foto: "fotos/hulda.jpg", tema: "Violência na escola: o papel do psicólogo na prevenção e no enfrentamento", nome: "Hulda Leia Santana de Almeida", horario: "19h30 às 21h30", sala: "702", inscricao: "",
     bio: "Psicóloga formada em 2013, especialista em Saúde Mental para Equipe Multidisciplinar e em Psicologia Clínica. Atendeu adolescentes em conflito com a lei, em articulação com CREAS e serviços de proteção. Atuou por seis anos em CAPS Infantojuvenil, no Núcleo de Proteção à Violência e no projeto de aproximação com as escolas de Perus. Realiza atendimentos clínicos e palestras em escolas e instituições." },
-  { foto: "fotos/cilene.jpg", tema: "Violência psicológica e relações abusivas: identificação, acolhimento e intervenção", nome: "Cilene Telles", horario: "", sala: "801", inscricao: "",
+  { foto: "fotos/cilene.jpg", tema: "Violência psicológica e relações abusivas: identificação, acolhimento e intervenção", nome: "Cilene Telles", horario: "19h30 às 21h30", sala: "801", inscricao: "",
     bio: "Psicóloga clínica e analista do comportamento, especialista em Clínica Analítico-Comportamental pelo Instituto Par. Docente do curso de Psicologia e fundadora da Prompt Psicologia e Desenvolvimento. Atende adolescentes e adultos, com ênfase em mulheres e pessoas neurodivergentes, em demandas de ansiedade, autoestima, relações interpessoais, autonomia e sofrimento psicológico. Faz orientação parental, supervisão clínica e formação profissional." },
-  { foto: "fotos/bernadete.jpg", tema: "Violência contra crianças e adolescentes: sinais de alerta, escuta e proteção", nome: "Bernadete Brosso", horario: "", sala: "802", inscricao: "",
+  { foto: "fotos/bernadete.jpg", tema: "Violência contra crianças e adolescentes: sinais de alerta, escuta e proteção", nome: "Bernadete Brosso", horario: "19h30 às 21h30", sala: "802", inscricao: "",
     bio: "Psicóloga pela FMU, formada em 1987, com trajetória na saúde pública. Atuou por 18 anos em unidades básicas, ambulatórios de especialidades e núcleos de reabilitação da Secretaria Municipal da Saúde de São Paulo. Participa de ações de prevenção da violência contra crianças e adolescentes e da violência intrafamiliar. Hoje atua na Supervisão Técnica de Saúde de Perus, na interlocução de saúde mental e no acompanhamento de casos de violência." },
-  { foto: "fotos/renato.jpg", tema: "Violência digital e controle nas relações: desafios para a Psicologia contemporânea", nome: "Renato Villela Gallo", horario: "", sala: "901", inscricao: "",
+  { foto: "fotos/renato.jpg", tema: "Violência digital e controle nas relações: desafios para a Psicologia contemporânea", nome: "Renato Villela Gallo", horario: "19h30 às 21h30", sala: "901", inscricao: "",
     bio: "Psicólogo clínico e neuropsicólogo, especialista em Terapia Cognitivo-Comportamental em Saúde Mental pela Faculdade de Medicina da USP e em Transtornos do Controle dos Impulsos pelo IPq-HCFMUSP. Colaborador e pesquisador do Grupo de Dependências Tecnológicas do ProAmiti, vinculado ao IPq-HCFMUSP." },
-  { foto: "fotos/caio.jpg", tema: "Documentos da(o) psicóloga(o)", nome: "Caio Vinícius Infante de Melo", horario: "", sala: "701", inscricao: "", tag: "Para o 10º semestre",
+  { foto: "fotos/caio.jpg", tema: "Documentos da(o) psicóloga(o)", nome: "Caio Vinícius Infante de Melo", horario: "19h30 às 21h30", sala: "701", inscricao: "", tag: "Para o 10º semestre",
     bio: "Psicólogo pela UNIFESP, campus Baixada Santista, e mestre em Ciências pela Faculdade de Medicina da USP. Tem experiência em saúde mental, assistência social e educação, principalmente no serviço público, e em docência na graduação em Psicologia. Trabalha como Especialista Técnico em Psicologia no Centro de Referência em Psicologia e Políticas Públicas (CREPOP) do CRP SP." }
 ];
 
@@ -504,7 +505,7 @@ const ETAPAS = [
 
 const FAQ = [
   ["Quem participa da Semana?", "Estudantes de Psicologia da Faculdade Nove de Julho — Osasco, de todos os semestres, com professores e profissionais convidados."],
-  ["Que horas começam as atividades?", "Os horários de cada dia aparecem nesta página em breve."],
+  ["Qual é o horário das atividades?", "Nos três dias, as atividades acontecem das 19h30 às 21h30."],
   ["Como assisto à abertura de 11/11?", "A abertura é on-line, com transmissão pelo YouTube. O link aparece nesta página e na comunidade do evento."],
   ["Posso trocar de palestra no dia 12/11?", "Não. Participe da atividade em que você se inscreveu."],
   ["Vou receber certificado?", "Não haverá certificado oficial para os inscritos. Quem apresentar trabalho recebe uma carta de agradecimento. As orientações sobre horas complementares aparecem nos avisos desta página."],
