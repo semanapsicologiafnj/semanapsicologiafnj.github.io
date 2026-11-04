@@ -127,6 +127,7 @@ section{scroll-margin-top:64px}
 .item .ttl{min-width:0;display:flex;flex-direction:column;gap:6px}
 .item .ttl h3{font-size:clamp(19px,2.4vw,23px)}
 .item .who{font-weight:600;font-size:14px}
+.item .sala-tag{display:inline-block;margin-left:10px;padding:1px 8px;border:1px solid var(--accent);color:var(--accent);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;vertical-align:1px;white-space:nowrap}
 .item .tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-top:2px}
 .item .plus{width:28px;height:28px;border:1px solid var(--line);display:grid;place-items:center;font-size:18px;line-height:1;color:var(--muted);transition:transform .2s}
 .item[open] .plus{transform:rotate(45deg);color:var(--accent);border-color:var(--accent)}
@@ -549,7 +550,7 @@ document.querySelector(".js-abertura").innerHTML = ABERTURA.map(p =>
 
 document.querySelector(".js-prog").innerHTML = PALESTRAS.map((p, i) =>
   '<details class="item" id="atividade-' + (i+1) + '"><summary><span class="n">' + String(i+1).padStart(2,"0") + '</span>' +
-  '<span class="head">' + avatar(p) + '<span class="ttl"><h3>' + esc(p.tema) + '</h3><span class="who">' + esc(p.nome) + '</span>' + (p.tag ? '<span class="tag">' + esc(p.tag) + '</span>' : '') + '</span></span>' +
+  '<span class="head">' + avatar(p) + '<span class="ttl"><h3>' + esc(p.tema) + '</h3><span class="who">' + esc(p.nome) + (p.sala ? '<span class="sala-tag">Sala ' + esc(p.sala) + '</span>' : '') + '</span>' + (p.tag ? '<span class="tag">' + esc(p.tag) + '</span>' : '') + '</span></span>' +
   '<span class="plus" aria-hidden="true">+</span></summary>' +
   '<div class="body"><div><p class="bio">' + esc(p.bio) + '</p>' +
   '<div class="meta"><span><b>Horário</b>' + soon(p.horario) + '</span><span><b>Sala</b>' + soon(p.sala) + '</span>' +
