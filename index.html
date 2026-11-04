@@ -316,7 +316,8 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
       <div class="speakers js-abertura"></div>
       <div class="band-foot">
         <span><span class="label">Horário</span>&nbsp; <span class="js-hora-abertura"></span></span>
-        <a class="btn js-youtube" href="#" target="_blank" rel="noopener">Transmissão em breve</a>
+        <span><span class="label">Onde assistir</span>&nbsp; Link do YouTube na Central do Aluno, no calendário de aulas.</span>
+        <a class="btn js-youtube" href="#" target="_blank" rel="noopener" hidden>Assistir no YouTube</a>
       </div>
     </div>
   </section>
@@ -447,7 +448,7 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
 const CONFIG = {
   atualizadoEm: "04/11/2026",
   linkInscricao: "",          // link geral do Sympla
-  linkYoutube: "",            // transmissão da abertura 11/11
+  linkYoutube: "",            // opcional: com link, aparece o botão "Assistir no YouTube"
   horaAbertura: "19h30 às 21h30",           // ex.: "19h30"
   whatsapp: "https://chat.whatsapp.com/JEGQR0wGhSdKlSjoIfVXqn"
 };
@@ -457,6 +458,7 @@ const CONFIG = {
 
 /* Avisos: o mais recente primeiro. novo: true mostra o selo "Novo". */
 const AVISOS = [
+  { data: "04/11", novo: true, texto: "Abertura on-line de 11/11: o link do YouTube está na Central do Aluno, no calendário de aulas." },
   { data: "04/11", novo: true, texto: "Horário confirmado: nos dias 11, 12 e 13 de novembro, as atividades acontecem das 19h30 às 21h30." },
   { data: "04/11", texto: "Salas das palestras e minicursos de 12/11 publicadas. Toque em cada atividade para ver a sua." },
   { data: "03/11", texto: "Programação de 11, 12 e 13 de novembro publicada. Horários, salas e links de inscrição em breve." },
@@ -506,7 +508,7 @@ const ETAPAS = [
 const FAQ = [
   ["Quem participa da Semana?", "Estudantes de Psicologia da Faculdade Nove de Julho — Osasco, de todos os semestres, com professores e profissionais convidados."],
   ["Qual é o horário das atividades?", "Nos três dias, as atividades acontecem das 19h30 às 21h30."],
-  ["Como assisto à abertura de 11/11?", "A abertura é on-line, com transmissão pelo YouTube. O link aparece nesta página e na comunidade do evento."],
+  ["Como assisto à abertura de 11/11?", "A abertura é on-line, com transmissão pelo YouTube. O link da transmissão está na Central do Aluno, no calendário de aulas."],
   ["Posso trocar de palestra no dia 12/11?", "Não. Participe da atividade em que você se inscreveu."],
   ["Vou receber certificado?", "Não haverá certificado oficial para os inscritos. Quem apresentar trabalho recebe uma carta de agradecimento. As orientações sobre horas complementares aparecem nos avisos desta página."],
   ["A presença vale ponto em disciplina?", "A presença é registrada na entrada da sala. A atribuição de pontos depende do acordo entre cada professor e sua turma."],
@@ -539,8 +541,7 @@ $$(".js-inscricao").forEach(a => {
 });
 if (CONFIG.linkInscricao) document.querySelector(".js-insc-status").innerHTML = '<span class="url">' + esc(CONFIG.linkInscricao) + '</span>';
 const yt = document.querySelector(".js-youtube");
-if (CONFIG.linkYoutube) { yt.href = CONFIG.linkYoutube; yt.textContent = "Assistir no YouTube"; }
-else { yt.setAttribute("aria-disabled","true"); yt.removeAttribute("href"); }
+if (CONFIG.linkYoutube) { yt.href = CONFIG.linkYoutube; yt.hidden = false; }
 document.querySelector(".js-hora-abertura").innerHTML = CONFIG.horaAbertura ? esc(CONFIG.horaAbertura) : "em breve";
 document.querySelector(".js-atualizado").textContent = "Atualizado em " + CONFIG.atualizadoEm;
 
