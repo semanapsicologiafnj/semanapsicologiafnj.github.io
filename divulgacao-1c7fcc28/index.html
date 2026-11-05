@@ -48,7 +48,6 @@ footer{max-width:1120px;margin:0 auto;padding:0 16px 48px;font-size:14px}
     <ul>
       <li>Toque em Baixar para salvar o card.</li>
       <li>Toque em Copiar legenda e cole no WhatsApp junto com a imagem.</li>
-      <li>Nos cards da abertura, troque [link do YouTube] pelo link da transmissão antes de enviar.</li>
     </ul>
   </div>
   <div class="acoes">
@@ -74,14 +73,14 @@ function palestra(n, nome, tema, bio, sala){
   return `12 de novembro, às 19h30, na ${sala}.\n\n${nome} fala sobre ${tema}\n\n${bio}\n\n• Inscrições no Sympla a partir de 6 de novembro\n• Vagas limitadas à capacidade da sala\n\n${ASSINATURA}`;
 }
 function abertura(nome, bio){
-  return `11 de novembro, às 19h30, on-line pelo YouTube.\n\n${nome} participa da abertura da Semana, com o tema Psicologia, Direitos Humanos e o Enfrentamento às Violências Contemporâneas.\n\n${bio}\n\n• Transmissão aberta, sem inscrição\n• Link: [link do YouTube]\n\n${ASSINATURA}`;
+  return `11 de novembro, às 19h30, on-line pelo YouTube.\n\n${nome} participa da abertura da Semana, com o tema Psicologia, Direitos Humanos e o Enfrentamento às Violências Contemporâneas.\n\n${bio}\n\n• Sem inscrição prévia\n• O link da transmissão fica disponível na Central do Aluno\n\n${ASSINATURA}`;
 }
 
 const CARDS = [
   {g:"geral", arq:"01-programacao", titulo:"Programação dos três dias", leg:
 `Nem toda violência deixa marcas visíveis. A IV Semana da Psicologia dedica três dias a esse tema.
 
-• 11/11, quarta: abertura on-line pelo YouTube
+• 11/11, quarta: abertura on-line pelo YouTube, com link na Central do Aluno
 • 12/11, quinta: dez palestras presenciais
 • 13/11, sexta: apresentação de trabalhos dos estudantes
 
