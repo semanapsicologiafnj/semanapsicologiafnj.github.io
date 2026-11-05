@@ -255,7 +255,7 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
         <h1>Nem toda violência deixa marcas <span class="script">visíveis.</span></h1>
         <p class="lead">Três dias para pensar a violência e o lugar da Psicologia diante dela.</p>
         <div class="actions">
-          <a class="btn js-inscricao" href="#inscricoes">Inscrições em breve</a>
+          <a class="btn js-inscricao" href="#inscricoes">Inscrições a partir de 6/11</a>
           <a class="btn ghost js-whats" href="#" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.1L4 20z"/></svg>
             Entrar na comunidade
@@ -378,21 +378,22 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
           <span class="label">Inscrições</span>
           <hr class="filete">
           <h2>Como se inscrever.</h2>
-          <p>As inscrições acontecem pelo Sympla, uma por atividade.</p>
+          <p>As inscrições nas palestras de 12/11 vão de 6 a 10 de novembro, pelo Sympla. Cada aluno escolhe uma palestra.</p>
         </div>
         <div class="linkbox">
           <span class="label">Link de inscrição</span>
-          <p class="js-insc-status">Em breve. O link aparece aqui e na comunidade do evento.</p>
-          <a class="btn js-inscricao" href="#inscricoes">Inscrições em breve</a>
+          <p class="js-insc-status">Abre em 6 de novembro. O link aparece aqui e na comunidade do evento.</p>
+          <a class="btn js-inscricao" href="#inscricoes">Inscrições a partir de 6/11</a>
         </div>
       </div>
       <div style="min-width:0">
         <span class="label" style="display:block;margin-bottom:12px">Regras de inscrição</span>
         <ul class="rules">
-          <li>Cada atividade do dia 12/11 tem inscrição separada no Sympla.</li>
+          <li>Inscrições de 6 a 10 de novembro, pelo Sympla.</li>
+          <li>Cada aluno se inscreve em uma palestra de 12/11.</li>
           <li>As vagas são limitadas à capacidade de cada sala.</li>
           <li>Participe da atividade em que você se inscreveu. Não há troca de sala no dia.</li>
-          <li>Monitores conferem a inscrição e registram a presença na entrada da sala.</li>
+          <li>O check-in nas salas começa às 19h. Monitores conferem a inscrição e registram a presença na entrada.</li>
           <li>A atividade "Documentos da(o) psicóloga(o)" é voltada ao décimo semestre.</li>
           <li>Na abertura on-line de 11/11, a forma de registrar presença aparece nos avisos desta página.</li>
           <li>Na apresentação de trabalhos de 13/11, o check-in é pelo Sympla, com lista de presença no dia.</li>
@@ -446,7 +447,7 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
    Campo vazio aparece no site como "Em breve".
    ============================================================ */
 const CONFIG = {
-  atualizadoEm: "04/11/2026",
+  atualizadoEm: "05/11/2026",
   linkInscricao: "",          // link geral do Sympla
   linkYoutube: "",            // opcional: com link, aparece o botão "Assistir no YouTube"
   horaAbertura: "19h30 às 21h30",           // ex.: "19h30"
@@ -458,17 +459,21 @@ const CONFIG = {
 
 /* Avisos: o mais recente primeiro. novo: true mostra o selo "Novo". */
 const AVISOS = [
-  { data: "04/11", novo: true, texto: "Abertura on-line de 11/11: o link do YouTube está na Central do Aluno, no calendário de aulas." },
-  { data: "04/11", novo: true, texto: "Horário confirmado: nos dias 11, 12 e 13 de novembro, as atividades acontecem das 19h30 às 21h30." },
+  { data: "05/11", novo: true, texto: "Inscrições nas palestras de 12/11: de 6 a 10 de novembro, pelo Sympla. Cada aluno escolhe uma palestra." },
+  { data: "05/11", novo: true, texto: "Kits: o pedido foi enviado por e-mail. Faça o pagamento até 6 de novembro e envie o comprovante para o WhatsApp indicado no final do e-mail." },
+  { data: "05/11", novo: true, texto: "Entrega dos kits na quinta-feira, 12 de novembro, às 17h." },
+  { data: "05/11", novo: true, texto: "Check-in nas salas às 19h. As atividades começam às 19h30." },
+  { data: "04/11", texto: "Abertura on-line de 11/11: o link do YouTube está na Central do Aluno, no calendário de aulas." },
+  { data: "04/11", texto: "Horário confirmado: nos dias 11, 12 e 13 de novembro, as atividades acontecem das 19h30 às 21h30." },
   { data: "04/11", texto: "Salas das palestras e minicursos de 12/11 publicadas. Toque em cada atividade para ver a sua." },
   { data: "03/11", texto: "Programação de 11, 12 e 13 de novembro publicada. Horários, salas e links de inscrição em breve." },
   { data: "30/10", texto: "Envio de trabalhos encerrado. Quem enviou recebe a devolutiva até 05/11." }
 ];
 
 const ABERTURA = [
-  { foto: "", nome: "Regina Célia Almeida Silva Barbosa", papel: "Instituto Maria da Penha", bio: "Filósofa e mestra em Ciência Política pela UFPE, com 30 anos de docência universitária. Cofundadora e vice-presidente do Instituto Maria da Penha, responsável pelos programas de mentoria e formação pedagógica dos voluntários. Atua no enfrentamento à violência contra a mulher, à violência doméstica, à violência de gênero e ao racismo." },
-  { foto: "", nome: "Flávio Urra", papel: "Programa E Agora, José?", bio: "Psicólogo, graduado também em Ciências Políticas e Sociais e mestre em Psicologia Social pela PUC-SP. Coordena o Programa E Agora, José?, de educação e responsabilização de homens, e o Curso de Gênero e Masculinidades. Docente de pós-graduação e pesquisador em masculinidades, gênero, violência contra a mulher, feminismo e infância." },
-  { foto: "", nome: "Daniela Fontoura", papel: "Saúde Mental e Gênero · UnB", bio: "Psicóloga pela UnB, mestra e doutoranda em Psicologia Clínica e Cultura na mesma instituição, na linha de Saúde Mental e Gênero. Estuda feminismos, trabalho, maternidades e não maternidade. Autora e coautora de capítulos sobre gênero e violência, colabora com o grupo Saúde Mental e Gênero, liderado por Valeska Zanello, e com o projeto Maria da Penha Vai à Escola." }
+  { foto: "fotos/regina.jpg", nome: "Regina Célia Almeida Silva Barbosa", papel: "Instituto Maria da Penha", bio: "Filósofa e mestra em Ciência Política pela UFPE, com 30 anos de docência universitária. Cofundadora e vice-presidente do Instituto Maria da Penha, responsável pelos programas de mentoria e formação pedagógica dos voluntários. Atua no enfrentamento à violência contra a mulher, à violência doméstica, à violência de gênero e ao racismo." },
+  { foto: "fotos/flavio.jpg", nome: "Flávio Urra", papel: "Programa E Agora, José?", bio: "Psicólogo, graduado também em Ciências Políticas e Sociais e mestre em Psicologia Social pela PUC-SP. Coordena o Programa E Agora, José?, de educação e responsabilização de homens, e o Curso de Gênero e Masculinidades. Docente de pós-graduação e pesquisador em masculinidades, gênero, violência contra a mulher, feminismo e infância." },
+  { foto: "fotos/daniela.jpg", nome: "Daniela Fontoura", papel: "Saúde Mental e Gênero · UnB", bio: "Psicóloga pela UnB, mestra e doutoranda em Psicologia Clínica e Cultura na mesma instituição, na linha de Saúde Mental e Gênero. Estuda feminismos, trabalho, maternidades e não maternidade. Autora e coautora de capítulos sobre gênero e violência, colabora com o grupo Saúde Mental e Gênero, liderado por Valeska Zanello, e com o projeto Maria da Penha Vai à Escola." }
 ];
 
 /* Palestras de 12/11: preencha horario, sala e inscricao (link Sympla da atividade). */
@@ -507,9 +512,13 @@ const ETAPAS = [
 
 const FAQ = [
   ["Quem participa da Semana?", "Estudantes de Psicologia da Faculdade Nove de Julho — Osasco, de todos os semestres, com professores e profissionais convidados."],
-  ["Qual é o horário das atividades?", "Nos três dias, as atividades acontecem das 19h30 às 21h30."],
+  ["Qual é o horário das atividades?", "Nos três dias, as atividades acontecem das 19h30 às 21h30. O check-in nas salas começa às 19h."],
+  ["Quando me inscrevo nas palestras de 12/11?", "De 6 a 10 de novembro, pelo Sympla."],
+  ["Posso me inscrever em mais de uma palestra?", "Não. Cada aluno escolhe uma palestra de 12/11."],
+  ["Como pago o kit?", "O pedido foi enviado por e-mail. Faça o pagamento até 6 de novembro e envie o comprovante para o WhatsApp indicado no final do e-mail."],
+  ["Quando recebo o kit?", "Na quinta-feira, 12 de novembro, às 17h."],
   ["Como assisto à abertura de 11/11?", "A abertura é on-line, com transmissão pelo YouTube. O link da transmissão está na Central do Aluno, no calendário de aulas."],
-  ["Posso trocar de palestra no dia 12/11?", "Não. Participe da atividade em que você se inscreveu."],
+  ["Posso trocar de palestra no dia 12/11?", "Não. Participe da palestra em que você se inscreveu."],
   ["Vou receber certificado?", "Não haverá certificado oficial para os inscritos. Quem apresentar trabalho recebe uma carta de agradecimento. As orientações sobre horas complementares aparecem nos avisos desta página."],
   ["A presença vale ponto em disciplina?", "A presença é registrada na entrada da sala. A atribuição de pontos depende do acordo entre cada professor e sua turma."],
   ["Posso apresentar um trabalho que não fala de violência?", "Sim. A violência é o tema prioritário, e trabalhos de outras temáticas da Psicologia também são aceitos."],
@@ -557,7 +566,7 @@ document.querySelector(".js-prog").innerHTML = PALESTRAS.map((p, i) =>
   '<span class="plus" aria-hidden="true">+</span></summary>' +
   '<div class="body"><div><p class="bio">' + esc(p.bio) + '</p>' +
   '<div class="meta"><span><b>Horário</b>' + soon(p.horario) + '</span><span><b>Sala</b>' + soon(p.sala) + '</span>' +
-  '<span><b>Inscrição</b>' + (p.inscricao ? '<a href="' + esc(p.inscricao) + '" target="_blank" rel="noopener">Inscrever-se no Sympla</a>' : '<span class="soon">em breve</span>') + '</span></div></div></div></details>').join("");
+  '<span><b>Inscrição</b>' + (p.inscricao ? '<a href="' + esc(p.inscricao) + '" target="_blank" rel="noopener">Inscrever-se no Sympla</a>' : 'Sympla, de 6 a 10/11') + '</span></div></div></div></details>').join("");
 
 const hoje = new Date(); hoje.setHours(0,0,0,0);
 let atual = false;
