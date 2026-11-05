@@ -48,7 +48,7 @@ footer{max-width:1120px;margin:0 auto;padding:0 16px 48px;font-size:14px}
     <ul>
       <li>Toque em Baixar para salvar o card.</li>
       <li>Toque em Copiar legenda e cole no WhatsApp junto com a imagem.</li>
-      <li>Antes de enviar, troque [link do Sympla] pelo link da palestra.</li>
+      <li>Nos cards da abertura, troque [link do YouTube] pelo link da transmissão antes de enviar.</li>
     </ul>
   </div>
   <div class="acoes">
@@ -71,7 +71,7 @@ footer{max-width:1120px;margin:0 auto;padding:0 16px 48px;font-size:14px}
 const ASSINATURA = "IV Semana da Psicologia, Faculdade Nove de Julho, Osasco.";
 
 function palestra(n, nome, tema, bio, sala){
-  return `12 de novembro, às 19h30, na ${sala}.\n\n${nome} fala sobre ${tema}\n\n${bio}\n\n• Inscrições no Sympla a partir de 6 de novembro\n• Vagas limitadas à capacidade da sala\n• Link: [link do Sympla]\n\n${ASSINATURA}`;
+  return `12 de novembro, às 19h30, na ${sala}.\n\n${nome} fala sobre ${tema}\n\n${bio}\n\n• Inscrições no Sympla a partir de 6 de novembro\n• Vagas limitadas à capacidade da sala\n\n${ASSINATURA}`;
 }
 function abertura(nome, bio){
   return `11 de novembro, às 19h30, on-line pelo YouTube.\n\n${nome} participa da abertura da Semana, com o tema Psicologia, Direitos Humanos e o Enfrentamento às Violências Contemporâneas.\n\n${bio}\n\n• Transmissão aberta, sem inscrição\n• Link: [link do YouTube]\n\n${ASSINATURA}`;
@@ -86,8 +86,6 @@ const CARDS = [
 • 13/11, sexta: apresentação de trabalhos dos estudantes
 
 Todas as atividades começam às 19h30. As inscrições para as palestras abrem no Sympla em 6 de novembro, com vagas limitadas.
-
-Link: [link do Sympla]
 
 ${ASSINATURA}`},
 
@@ -134,7 +132,6 @@ Psicólogo pela UNIFESP e mestre em Ciências pela Faculdade de Medicina da USP,
 
 • Inscrições no Sympla a partir de 6 de novembro
 • Vagas limitadas à capacidade da sala
-• Link: [link do Sympla]
 
 ${ASSINATURA}`},
 ];
