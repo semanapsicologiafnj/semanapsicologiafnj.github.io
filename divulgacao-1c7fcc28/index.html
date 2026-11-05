@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cards de divulgação · IV Semana da Psicologia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+:root{--areia:#e6ded1;--bege:#efe5d6;--claro:#f3ede3;--vinho:#6b1f2a;--preto:#1d1b1a;--fio:rgba(107,31,42,.35)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--areia);color:var(--preto);font-family:Montserrat,system-ui,sans-serif;font-size:16px;line-height:1.5}
+header{max-width:1120px;margin:0 auto;padding:40px 16px 8px}
+.sobre{font-size:14px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--vinho)}
+h1{font-family:'Libre Caslon Text',Georgia,serif;font-weight:400;font-size:clamp(32px,6vw,52px);line-height:1.05;margin:10px 0 14px}
+.fio{width:220px;height:2px;background:var(--vinho);position:relative;margin:0 0 20px}
+.fio::after{content:"";position:absolute;right:0;top:-10px;width:2px;height:22px;background:var(--vinho)}
+.intro{max-width:720px;margin:0 0 20px}
+.intro li{margin-bottom:4px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 18px;border:1.5px solid var(--vinho);background:var(--vinho);color:var(--bege);font:600 15px/1.2 Montserrat,sans-serif;letter-spacing:.04em;text-decoration:none;cursor:pointer;border-radius:0}
+.btn.sec{background:transparent;color:var(--vinho)}
+.btn:focus-visible{outline:3px solid var(--preto);outline-offset:2px}
+main{max-width:1120px;margin:0 auto;padding:16px 16px 64px}
+h2{font-family:'Libre Caslon Text',Georgia,serif;font-weight:400;font-size:28px;margin:36px 0 16px}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+.card{background:var(--claro);border:1.5px solid var(--fio);display:flex;flex-direction:column}
+.card img{display:block;width:100%;height:auto;aspect-ratio:4/5;border-bottom:1.5px solid var(--fio)}
+.corpo{padding:16px;display:flex;flex-direction:column;gap:12px;flex-grow:1}
+.titulo{font-weight:700;font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:var(--vinho)}
+label{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+textarea{width:100%;min-height:220px;resize:vertical;padding:12px;border:1.5px solid var(--fio);background:#fff;color:var(--preto);font:15px/1.5 Montserrat,sans-serif}
+.linha{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+.linha .btn{flex:1 1 130px}
+.aviso{font-size:14px;color:var(--vinho);min-height:20px}
+footer{max-width:1120px;margin:0 auto;padding:0 16px 48px;font-size:14px}
+</style>
+</head>
+<body>
+<header>
+  <div class="sobre">IV Semana da Psicologia · Osasco</div>
+  <h1>Cards de divulgação</h1>
+  <div class="fio"></div>
+  <div class="intro">
+    <p>Página interna da equipe digital. Ela não aparece no site e não é indexada pelo Google. Compartilhe o link só com quem vai divulgar.</p>
+    <ul>
+      <li>Toque em Baixar para salvar o card.</li>
+      <li>Toque em Copiar legenda e cole no WhatsApp junto com a imagem.</li>
+      <li>Antes de enviar, troque [link do Sympla] pelo link da palestra.</li>
+    </ul>
+  </div>
+  <div class="acoes">
+    <a class="btn" href="cards-semana-psicologia.zip" download>Baixar todos os cards (.zip)</a>
+  </div>
+</header>
+
+<main>
+  <h2>Programação geral</h2>
+  <div class="grade" id="g-geral"></div>
+  <h2>Abertura on-line · 11/11</h2>
+  <div class="grade" id="g-abertura"></div>
+  <h2>Palestras presenciais · 12/11</h2>
+  <div class="grade" id="g-palestras"></div>
+</main>
+
+<footer>Faculdade Nove de Julho · Osasco · 11, 12 e 13 de novembro de 2026</footer>
+
+<script>
+const ASSINATURA = "IV Semana da Psicologia, Faculdade Nove de Julho, Osasco.";
+
+function palestra(n, nome, tema, bio, sala){
+  return `12 de novembro, às 19h30, na ${sala}.\n\n${nome} fala sobre ${tema}\n\n${bio}\n\n• Inscrições no Sympla a partir de 6 de novembro\n• Vagas limitadas à capacidade da sala\n• Link: [link do Sympla]\n\n${ASSINATURA}`;
+}
+function abertura(nome, bio){
+  return `11 de novembro, às 19h30, on-line pelo YouTube.\n\n${nome} participa da abertura da Semana, com o tema Psicologia, Direitos Humanos e o Enfrentamento às Violências Contemporâneas.\n\n${bio}\n\n• Transmissão aberta, sem inscrição\n• Link: [link do YouTube]\n\n${ASSINATURA}`;
+}
+
+const CARDS = [
+  {g:"geral", arq:"01-programacao", titulo:"Programação dos três dias", leg:
+`Nem toda violência deixa marcas visíveis. A IV Semana da Psicologia dedica três dias a esse tema.
+
+• 11/11, quarta: abertura on-line pelo YouTube
+• 12/11, quinta: dez palestras presenciais
+• 13/11, sexta: apresentação de trabalhos dos estudantes
+
+Todas as atividades começam às 19h30. As inscrições para as palestras abrem no Sympla em 6 de novembro, com vagas limitadas.
+
+Link: [link do Sympla]
+
+${ASSINATURA}`},
+
+  {g:"abertura", arq:"02-abertura-regina", titulo:"Regina Célia Almeida Silva Barbosa", leg: abertura("Regina Célia Almeida Silva Barbosa",
+"Filósofa e mestra em Ciência Política pela UFPE, com 30 anos de docência. Cofundadora e vice-presidente do Instituto Maria da Penha.")},
+  {g:"abertura", arq:"03-abertura-flavio", titulo:"Flávio Urra", leg: abertura("Flávio Urra",
+"Psicólogo e mestre em Psicologia Social pela PUC-SP. Coordena o Programa E Agora, José?, de educação e responsabilização de homens.")},
+  {g:"abertura", arq:"04-abertura-daniela", titulo:"Daniela Fontoura", leg: abertura("Daniela Fontoura",
+"Psicóloga, mestra e doutoranda em Psicologia Clínica e Cultura pela UnB. Estuda gênero, feminismos e maternidades.")},
+
+  {g:"palestras", arq:"05-palestra-thamyres", titulo:"Thamyres Santos da Cruz · Sala 201", leg: palestra(1,"Thamyres Santos da Cruz",
+"tipos de violência e as consequências no indivíduo.",
+"Psicóloga pela PUC-SP, com 12 anos de experiência com infância e juventude e dez anos na assistência social de São Paulo.","sala 201")},
+  {g:"palestras", arq:"06-palestra-valeska", titulo:"Valeska da Silva Bohus · Sala 301", leg: palestra(2,"Valeska da Silva Bohus",
+"esquemas mentais e a criação de crenças que impactam o comportamento do indivíduo.",
+"Neuropsicóloga, pedagoga e professora de Psicologia da Faculdade Nove de Julho, Osasco.","sala 301")},
+  {g:"palestras", arq:"07-palestra-patricia", titulo:"Patricia Bergantin Soares Paggiaro · Sala 502", leg: palestra(3,"Patricia Bergantin Soares Paggiaro",
+"o ciclo da violência: desafios, limites e intervenções.",
+"Doutora em Saúde pela UNG. Atuou 16 anos no Tribunal de Justiça de São Paulo, na Vara da Infância e em perícias na Vara da Família.","sala 502")},
+  {g:"palestras", arq:"08-palestra-ana-leticia", titulo:"Ana Letícia Guedes Pereira · Sala 601", leg: palestra(4,"Ana Letícia Guedes Pereira",
+"políticas públicas e as rotas de acesso.",
+"Psicóloga e mestra pela PUC-SP. Professora e supervisora de estágio social na Faculdade Nove de Julho, Osasco.","sala 601")},
+  {g:"palestras", arq:"09-palestra-gabriela", titulo:"Gabriela de Souza Rodrigues · Lab I", leg: palestra(5,"Gabriela de Souza Rodrigues",
+"violência de gênero e os impactos nos grupos LGBTQIAPN+.",
+"Psicóloga pelo Mackenzie e mestra em Psicologia Social pela USP. Docente da Faculdade Nove de Julho e integrante do grupo FRESTA.","Lab I")},
+  {g:"palestras", arq:"10-palestra-hulda", titulo:"Hulda Leia Santana de Almeida · Sala 702", leg: palestra(6,"Hulda Leia Santana de Almeida",
+"violência na escola e o papel do psicólogo na prevenção e no enfrentamento.",
+"Psicóloga especialista em Saúde Mental. Atuou seis anos em CAPS Infantojuvenil, no Núcleo de Proteção à Violência.","sala 702")},
+  {g:"palestras", arq:"11-palestra-cilene", titulo:"Cilene Telles · Sala 801", leg: palestra(7,"Cilene Telles",
+"violência psicológica e relações abusivas: identificação, acolhimento e intervenção.",
+"Psicóloga clínica e analista do comportamento, docente de Psicologia e fundadora da Prompt Psicologia e Desenvolvimento.","sala 801")},
+  {g:"palestras", arq:"12-palestra-bernadete", titulo:"Bernadete Brosso · Sala 802", leg: palestra(8,"Bernadete Brosso",
+"violência contra crianças e adolescentes: sinais de alerta, escuta e proteção.",
+"Psicóloga desde 1987, com 18 anos na Secretaria Municipal da Saúde de São Paulo. Hoje atua na Supervisão Técnica de Saúde de Perus.","sala 802")},
+  {g:"palestras", arq:"13-palestra-renato", titulo:"Renato Villela Gallo · Sala 901", leg: palestra(9,"Renato Villela Gallo",
+"violência digital e controle nas relações.",
+"Psicólogo clínico e neuropsicólogo, pesquisador do Grupo de Dependências Tecnológicas do ProAmiti, no IPq-HCFMUSP.","sala 901")},
+  {g:"palestras", arq:"14-palestra-caio", titulo:"Caio Vinícius Infante de Melo · Sala 701", leg:
+`12 de novembro, às 19h30, na sala 701. Atividade para o 10º semestre.
+
+Caio Vinícius Infante de Melo fala sobre os documentos da(o) psicóloga(o).
+
+Psicólogo pela UNIFESP e mestre em Ciências pela Faculdade de Medicina da USP, com experiência em saúde mental, assistência social e educação no serviço público.
+
+• Inscrições no Sympla a partir de 6 de novembro
+• Vagas limitadas à capacidade da sala
+• Link: [link do Sympla]
+
+${ASSINATURA}`},
+];
+
+function el(tag, attrs, txt){ const e=document.createElement(tag); for(const k in attrs) e.setAttribute(k, attrs[k]); if(txt) e.textContent=txt; return e; }
+
+async function copiar(ta, aviso){
+  try { await navigator.clipboard.writeText(ta.value); }
+  catch(e){ ta.focus(); ta.select(); try{ document.execCommand("copy"); }catch(_){} }
+  aviso.textContent = "Legenda copiada.";
+  setTimeout(()=>{ aviso.textContent=""; }, 2500);
+}
+
+CARDS.forEach((c,i)=>{
+  const art = el("article",{class:"card"});
+  const src = `cards/${c.arq}.jpg`;
+  art.appendChild(el("img",{src, alt:`Card: ${c.titulo}`, loading:"lazy", width:"1080", height:"1350"}));
+  const corpo = el("div",{class:"corpo"});
+  corpo.appendChild(el("div",{class:"titulo"}, c.titulo));
+  const id = "leg-"+i;
+  corpo.appendChild(el("label",{for:id},"Legenda sugerida"));
+  const ta = el("textarea",{id});
+  ta.value = c.leg;
+  corpo.appendChild(ta);
+  const linha = el("div",{class:"linha"});
+  const a = el("a",{class:"btn", href:src, download:`${c.arq}.jpg`},"Baixar card");
+  const b = el("button",{class:"btn sec", type:"button"},"Copiar legenda");
+  const aviso = el("div",{class:"aviso", role:"status", "aria-live":"polite"});
+  b.addEventListener("click",()=>copiar(ta, aviso));
+  linha.appendChild(a); linha.appendChild(b);
+  corpo.appendChild(linha); corpo.appendChild(aviso);
+  art.appendChild(corpo);
+  document.getElementById("g-"+c.g).appendChild(art);
+});
+</script>
+</body>
+</html>
