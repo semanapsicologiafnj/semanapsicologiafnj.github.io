@@ -150,7 +150,9 @@ section{scroll-margin-top:64px}
 .mins div{display:flex;flex-direction:column}
 .mins strong{font-family:var(--serif);font-weight:400;font-size:40px;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
 .mins span{font-size:12px;color:var(--muted);letter-spacing:.06em}
-@media (max-width:760px){.formats{grid-template-columns:1fr}}
+.formats.prod{grid-template-columns:repeat(3,1fr);margin-bottom:28px}
+#produtos + #duvidas{padding-top:0}
+@media (max-width:760px){.formats,.formats.prod{grid-template-columns:1fr}}
 .steps{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border-top:2px solid var(--line);margin:0;padding:0;list-style:none}
 .step{padding:18px 16px 0 0;display:flex;flex-direction:column;gap:6px;position:relative;min-width:0}
 .step::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--line)}
@@ -242,6 +244,8 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
       <a href="#palestras">12/11</a>
       <a href="#trabalhos">13/11</a>
       <a href="#inscricoes">Inscrições</a>
+      <a href="#sorteio">Sorteio</a>
+      <a href="#produtos">Produtos</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
   </div>
@@ -378,7 +382,7 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
           <span class="label">Inscrições</span>
           <hr class="filete">
           <h2>Como se inscrever.</h2>
-          <p>As inscrições nas palestras de 12/11 vão de 6 a 10 de novembro, pelo Sympla. Cada aluno escolhe uma palestra.</p>
+          <p>Inscrições abertas para as palestras presenciais de 12/11, até 10 de novembro, pelo Sympla. Escolha uma atividade. Gratuito, com 80 vagas por atividade.</p>
         </div>
         <div class="linkbox">
           <span class="label">Link de inscrição</span>
@@ -389,15 +393,82 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
       <div style="min-width:0">
         <span class="label" style="display:block;margin-bottom:12px">Regras de inscrição</span>
         <ul class="rules">
-          <li>Inscrições de 6 a 10 de novembro, pelo Sympla.</li>
-          <li>Cada aluno se inscreve em uma palestra de 12/11.</li>
-          <li>As vagas são limitadas à capacidade de cada sala.</li>
+          <li>Inscrições até 10 de novembro, pelo Sympla.</li>
+          <li>Cada aluno se inscreve em uma atividade de 12/11.</li>
+          <li>Na inscrição, preencha nome, e-mail, RA, semestre e turma.</li>
+          <li>Gratuito. São 80 vagas por atividade.</li>
           <li>Participe da atividade em que você se inscreveu. Não há troca de sala no dia.</li>
           <li>O check-in nas salas começa às 19h. Monitores conferem a inscrição e registram a presença na entrada.</li>
           <li>A atividade "Documentos da(o) psicóloga(o)" é voltada ao décimo semestre.</li>
           <li>Na abertura on-line de 11/11, a forma de registrar presença aparece nos avisos desta página.</li>
           <li>Na apresentação de trabalhos de 13/11, o check-in é pelo Sympla, com lista de presença no dia.</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="sorteio" class="sec tri">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Sorteio</span>
+        <hr class="filete">
+        <h2>Mini book de fotos.</h2>
+        <p>Um sorteio para guardar em imagens um pouco da sua trajetória na Psicologia. O mini book tem 5 fotos.</p>
+      </div>
+      <div class="formats" style="margin-bottom:0">
+        <div class="fmt">
+          <span class="label">O que tem no mini book</span>
+          <h3>5 fotos.</h3>
+          <ul>
+            <li>Retrato individual.</li>
+            <li>Foto com jaleco ou livro.</li>
+            <li>Foto com amigos.</li>
+          </ul>
+          <p style="font-size:15px;color:var(--muted)">As fotos são feitas em 16 e 17 de novembro. Quem for sorteado recebe pelo WhatsApp o local e os detalhes.</p>
+        </div>
+        <div class="fmt">
+          <span class="label">Como participar</span>
+          <h3>Voucher e formulário.</h3>
+          <ul>
+            <li>Retire o voucher de participação durante o evento.</li>
+            <li>Preencha o formulário do Google Forms até 13/11, às 19h.</li>
+            <li>Quem for sorteado retira o voucher com a professora Cilene em 13/11, até 21h30.</li>
+          </ul>
+          <p class="js-sorteio-status" style="font-size:15px;color:var(--muted)">O link do formulário aparece aqui durante o evento.</p>
+          <a class="btn js-sorteio" href="#sorteio">Formulário do sorteio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="produtos" class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Produtos da Semana</span>
+        <hr class="filete">
+        <h2>Camiseta, boné e caneca.</h2>
+        <p>Pedidos até 9 de novembro, direto com a Macfly Estampas pelo WhatsApp. As peças seguem a arte oficial do evento, sem modificações.</p>
+      </div>
+      <div class="formats prod">
+        <div class="fmt">
+          <span class="label">Camiseta</span>
+          <div class="mins"><div><strong>R$ 52,90</strong></div></div>
+          <p style="font-size:15px;color:var(--muted)">Areia ou preta. Modelos básica unissex, baby look e plus size.</p>
+        </div>
+        <div class="fmt">
+          <span class="label">Boné</span>
+          <div class="mins"><div><strong>R$ 35,00</strong></div></div>
+          <p style="font-size:15px;color:var(--muted)">Branco ou preto.</p>
+        </div>
+        <div class="fmt">
+          <span class="label">Caneca</span>
+          <div class="mins"><div><strong>R$ 30,00</strong></div></div>
+          <p style="font-size:15px;color:var(--muted)">Branca, com a arte da Semana.</p>
+        </div>
+      </div>
+      <div class="band-foot" style="border-color:var(--line);margin-top:0">
+        <a class="btn" href="https://wa.me/5511971038889?text=Ol%C3%A1%2C%20Elis!%20Quero%20fazer%20um%20pedido%20das%20pe%C3%A7as%20da%20IV%20Semana%20da%20Psicologia%20%E2%80%94%20Osasco." target="_blank" rel="noopener">Fazer pedido pelo WhatsApp</a>
+        <span>Contato: Elis, (11) 97103-8889 · Pedidos até 09/11</span>
       </div>
     </div>
   </section>
@@ -447,8 +518,9 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
    Campo vazio aparece no site como "Em breve".
    ============================================================ */
 const CONFIG = {
-  atualizadoEm: "05/11/2026",
-  linkInscricao: "",          // link geral do Sympla
+  atualizadoEm: "06/11/2026",
+  linkInscricao: "https://www.sympla.com.br/evento/iv-semana-da-psicologia-palestras-e-minicursos---osasco/3632043",          // link geral do Sympla
+  linkSorteio: "",            // link do Google Forms do sorteio do mini book
   linkYoutube: "",            // opcional: com link, aparece o botão "Assistir no YouTube"
   horaAbertura: "19h30 às 21h30",           // ex.: "19h30"
   whatsapp: "https://chat.whatsapp.com/JEGQR0wGhSdKlSjoIfVXqn"
@@ -459,10 +531,12 @@ const CONFIG = {
 
 /* Avisos: o mais recente primeiro. novo: true mostra o selo "Novo". */
 const AVISOS = [
-  { data: "05/11", novo: true, texto: "Inscrições nas palestras de 12/11: de 6 a 10 de novembro, pelo Sympla. Cada aluno escolhe uma palestra." },
-  { data: "05/11", novo: true, texto: "Kits: o pedido foi enviado por e-mail. Faça o pagamento até 6 de novembro e envie o comprovante para o WhatsApp indicado no final do e-mail." },
-  { data: "05/11", novo: true, texto: "Entrega dos kits na quinta-feira, 12 de novembro, às 17h." },
-  { data: "05/11", novo: true, texto: "Check-in nas salas às 19h. As atividades começam às 19h30." },
+  { data: "06/11", novo: true, texto: "Inscrições abertas para as palestras de 12/11. Escolha uma atividade no Sympla até 10/11. Gratuito, 80 vagas por atividade." },
+  { data: "06/11", novo: true, texto: "Sorteio de um mini book de fotos. Retire o voucher durante o evento e preencha o formulário até 13/11, às 19h." },
+  { data: "06/11", novo: true, texto: "Camiseta, boné e caneca da Semana: pedidos até 9/11 pelo WhatsApp (11) 97103-8889." },
+  { data: "05/11", texto: "Kits: o pedido foi enviado por e-mail. Faça o pagamento até 6 de novembro e envie o comprovante para o WhatsApp indicado no final do e-mail." },
+  { data: "05/11", texto: "Entrega dos kits na quinta-feira, 12 de novembro, às 17h." },
+  { data: "05/11", texto: "Check-in nas salas às 19h. As atividades começam às 19h30." },
   { data: "04/11", texto: "Abertura on-line de 11/11: o link do YouTube está na Central do Aluno, no calendário de aulas." },
   { data: "04/11", texto: "Horário confirmado: nos dias 11, 12 e 13 de novembro, as atividades acontecem das 19h30 às 21h30." },
   { data: "04/11", texto: "Salas das palestras e minicursos de 12/11 publicadas. Toque em cada atividade para ver a sua." },
@@ -478,25 +552,25 @@ const ABERTURA = [
 
 /* Palestras de 12/11: preencha horario, sala e inscricao (link Sympla da atividade). */
 const PALESTRAS = [
-  { foto: "fotos/thamyres.jpg", tema: "Tipos de violência e as consequências no indivíduo", nome: "Thamyres Santos da Cruz", horario: "19h30 às 21h30", sala: "201", inscricao: "",
+  { foto: "fotos/thamyres.jpg", tema: "Tipos de violência e as consequências no indivíduo", nome: "Thamyres Santos da Cruz", horario: "19h30 às 21h30", sala: "201", inscricao: "https://www.sympla.com.br/evento/iv-semana-da-psicologia-palestras-e-minicursos---osasco/3632043",
     bio: "Psicóloga pela PUC-SP, com 12 anos de experiência em infância, adolescência e juventude e dez anos na assistência social da cidade de São Paulo. Trabalha com proteção, acolhimento e enfrentamento à violência, com foco nas diretrizes de SAICA e no manejo de casos de violação de direitos. Atua na interface entre Psicologia, Sistema de Garantia de Direitos e Sistema de Justiça, com suporte técnico ao TJSP e ao MPSP." },
-  { foto: "fotos/valeska.jpg", tema: "Esquemas mentais e a criação de crenças que impactam o comportamento do indivíduo", nome: "Valeska da Silva Bohus", horario: "19h30 às 21h30", sala: "301", inscricao: "",
+  { foto: "fotos/valeska.jpg", tema: "Esquemas mentais e a criação de crenças que impactam o comportamento do indivíduo", nome: "Valeska da Silva Bohus", horario: "19h30 às 21h30", sala: "301", inscricao: "https://www.sympla.com.br/evento/iv-semana-da-psicologia-palestras-e-minicursos---osasco/3632043",
     bio: "Neuropsicóloga, pedagoga, palestrante e professora do curso de Psicologia da Faculdade Nove de Julho — Osasco. Tem especializações em Neurociências, Neuropsicologia, Terapia Cognitivo-Comportamental, Psicopedagogia Clínica e Institucional e Psicologia Organizacional, com atuação em educação e desenvolvimento humano." },
-  { foto: "fotos/patricia.jpg", tema: "Ciclo da violência: desafios, limites e intervenções", nome: "Patricia Bergantin Soares Paggiaro", horario: "19h30 às 21h30", sala: "502", inscricao: "",
+  { foto: "fotos/patricia.jpg", tema: "Ciclo da violência: desafios, limites e intervenções", nome: "Patricia Bergantin Soares Paggiaro", horario: "19h30 às 21h30", sala: "502", inscricao: "https://www.sympla.com.br/evento/iv-semana-da-psicologia-palestras-e-minicursos---osasco/3632043",
     bio: "Doutora em Saúde pela UNG, mestra em Psicologia da Aprendizagem pela UNESP e especialista em Terapia Cognitivo-Comportamental pela USP. Atuou por 16 anos no Tribunal de Justiça de São Paulo, como chefe substituta da seção de Psicologia da Vara da Infância e em avaliações periciais na Vara da Família, além de formar equipes técnicas de SAICAs. Atende em clínica comportamental, avaliação bariátrica e orientação profissional." },
-  { foto: "fotos/ana-leticia.jpg", tema: "Políticas públicas e as rotas de acesso", nome: "Ana Letícia Guedes Pereira", horario: "19h30 às 21h30", sala: "601", inscricao: "",
+  { foto: "fotos/ana-leticia.jpg", tema: "Políticas públicas e as rotas de acesso", nome: "Ana Letícia Guedes Pereira", horario: "19h30 às 21h30", sala: "601", inscricao: "https://www.sympla.com.br/evento/iv-semana-da-psicologia-palestras-e-minicursos---osasco/3632043",
     bio: "Psicóloga e mestra em Psicologia Clínica em Família e Comunidade pela PUC-SP, com aprimoramento clínico pela Clínica-Escola Ana Maria Poppovic. Atuou com crianças e adolescentes no Giramundo Oficinas Terapêuticas e tem experiência em tutoria e coordenação de curso. É professora e supervisora de estágio básico social na Faculdade Nove de Julho — Osasco." },
-  { foto: "fotos/gabriela.jpg", tema: "Violência de gênero: impactos nos grupos LGBTQIAPN+", nome: "Gabriela de Souza Rodrigues", horario: "19h30 às 21h30", sala: "Lab I", inscricao: "",
+  { foto: "fotos/gabriela.jpg", tema: "Violência de gênero: impactos nos grupos LGBTQIAPN+", nome: "Gabriela de Souza Rodrigues", horario: "19h30 às 21h30", sala: "Lab I", inscricao: "https://www.sympla.com.br/evento/iv-semana-da-psicologia-palestras-e-minicursos---osasco/3632043",
     bio: "Psicóloga pela Universidade Presbiteriana Mackenzie, mestra em Psicologia Social pela USP e especialista em Psicoterapia de Orientação Psicanalítica. Docente da Faculdade Nove de Julho, integra o grupo FRESTA (Fronteiras, Relações e Território: experiências de violência generificada). Seus estudos articulam Psicanálise, violência de gênero, teorias feministas e Psicologia Social." },
-  { foto: "fotos/hulda.jpg", tema: "Violência na escola: o papel do psicólogo na prevenção e no enfrentamento", nome: "Hulda Leia Santana de Almeida", horario: "19h30 às 21h30", sala: "702", inscricao: "",
+  { foto: "fotos/hulda.jpg", tema: "Violência na escola: o papel do psicólogo na prevenção e no enfrentamento", nome: "Hulda Leia Santana de Almeida", horario: "19h30 às 21h30", sala: "702", inscricao: "https://www.sympla.com.br/evento/iv-semana-da-psicologia-palestras-e-minicursos---osasco/3632043",
     bio: "Psicóloga formada em 2013, especialista em Saúde Mental para Equipe Multidisciplinar e em Psicologia Clínica. Atendeu adolescentes em conflito com a lei, em articulação com CREAS e serviços de proteção. Atuou por seis anos em CAPS Infantojuvenil, no Núcleo de Proteção à Violência e no projeto de aproximação com as escolas de Perus. Realiza atendimentos clínicos e palestras em escolas e instituições." },
-  { foto: "fotos/cilene.jpg", tema: "Violência psicológica e relações abusivas: identificação, acolhimento e intervenção", nome: "Cilene Telles", horario: "19h30 às 21h30", sala: "801", inscricao: "",
+  { foto: "fotos/cilene.jpg", tema: "Violência psicológica e relações abusivas: identificação, acolhimento e intervenção", nome: "Cilene Telles", horario: "19h30 às 21h30", sala: "801", inscricao: "https://www.sympla.com.br/evento/iv-semana-da-psicologia-palestras-e-minicursos---osasco/3632043",
     bio: "Psicóloga clínica e analista do comportamento, especialista em Clínica Analítico-Comportamental pelo Instituto Par. Docente do curso de Psicologia e fundadora da Prompt Psicologia e Desenvolvimento. Atende adolescentes e adultos, com ênfase em mulheres e pessoas neurodivergentes, em demandas de ansiedade, autoestima, relações interpessoais, autonomia e sofrimento psicológico. Faz orientação parental, supervisão clínica e formação profissional." },
-  { foto: "fotos/bernadete.jpg", tema: "Violência contra crianças e adolescentes: sinais de alerta, escuta e proteção", nome: "Bernadete Brosso", horario: "19h30 às 21h30", sala: "802", inscricao: "",
+  { foto: "fotos/bernadete.jpg", tema: "Violência contra crianças e adolescentes: sinais de alerta, escuta e proteção", nome: "Bernadete Brosso", horario: "19h30 às 21h30", sala: "802", inscricao: "https://www.sympla.com.br/evento/iv-semana-da-psicologia-palestras-e-minicursos---osasco/3632043",
     bio: "Psicóloga pela FMU, formada em 1987, com trajetória na saúde pública. Atuou por 18 anos em unidades básicas, ambulatórios de especialidades e núcleos de reabilitação da Secretaria Municipal da Saúde de São Paulo. Participa de ações de prevenção da violência contra crianças e adolescentes e da violência intrafamiliar. Hoje atua na Supervisão Técnica de Saúde de Perus, na interlocução de saúde mental e no acompanhamento de casos de violência." },
-  { foto: "fotos/renato.jpg", tema: "Violência digital e controle nas relações: desafios para a Psicologia contemporânea", nome: "Renato Villela Gallo", horario: "19h30 às 21h30", sala: "901", inscricao: "",
+  { foto: "fotos/renato.jpg", tema: "Violência digital e controle nas relações: desafios para a Psicologia contemporânea", nome: "Renato Villela Gallo", horario: "19h30 às 21h30", sala: "901", inscricao: "https://www.sympla.com.br/evento/iv-semana-da-psicologia-palestras-e-minicursos---osasco/3632043",
     bio: "Psicólogo clínico e neuropsicólogo, especialista em Terapia Cognitivo-Comportamental em Saúde Mental pela Faculdade de Medicina da USP e em Transtornos do Controle dos Impulsos pelo IPq-HCFMUSP. Colaborador e pesquisador do Grupo de Dependências Tecnológicas do ProAmiti, vinculado ao IPq-HCFMUSP." },
-  { foto: "fotos/caio.jpg", tema: "Documentos da(o) psicóloga(o)", nome: "Caio Vinícius Infante de Melo", horario: "19h30 às 21h30", sala: "701", inscricao: "", tag: "Para o 10º semestre",
+  { foto: "fotos/caio.jpg", tema: "Documentos da(o) psicóloga(o)", nome: "Caio Vinícius Infante de Melo", horario: "19h30 às 21h30", sala: "701", inscricao: "https://www.sympla.com.br/evento/iv-semana-da-psicologia-palestras-e-minicursos---osasco/3632043", tag: "Para o 10º semestre",
     bio: "Psicólogo pela UNIFESP, campus Baixada Santista, e mestre em Ciências pela Faculdade de Medicina da USP. Tem experiência em saúde mental, assistência social e educação, principalmente no serviço público, e em docência na graduação em Psicologia. Trabalha como Especialista Técnico em Psicologia no Centro de Referência em Psicologia e Políticas Públicas (CREPOP) do CRP SP." }
 ];
 
@@ -513,7 +587,8 @@ const ETAPAS = [
 const FAQ = [
   ["Quem participa da Semana?", "Estudantes de Psicologia da Faculdade Nove de Julho — Osasco, de todos os semestres, com professores e profissionais convidados."],
   ["Qual é o horário das atividades?", "Nos três dias, as atividades acontecem das 19h30 às 21h30. O check-in nas salas começa às 19h."],
-  ["Quando me inscrevo nas palestras de 12/11?", "De 6 a 10 de novembro, pelo Sympla."],
+  ["Quando me inscrevo nas palestras de 12/11?", "Até 10 de novembro, pelo Sympla. O link está na seção Inscrições desta página."],
+  ["A inscrição nas palestras é paga?", "Não. A inscrição é gratuita, com 80 vagas por atividade."],
   ["Posso me inscrever em mais de uma palestra?", "Não. Cada aluno escolhe uma palestra de 12/11."],
   ["Como pago o kit?", "O pedido foi enviado por e-mail. Faça o pagamento até 6 de novembro e envie o comprovante para o WhatsApp indicado no final do e-mail."],
   ["Quando recebo o kit?", "Na quinta-feira, 12 de novembro, às 17h."],
@@ -526,6 +601,8 @@ const FAQ = [
   ["Meu trabalho é de grupo. Todos precisam apresentar?", "Não. Parte dos autores apresenta, desde que os demais autorizem e tenham a autoria preservada."],
   ["Posso apresentar um relato de estágio ainda em andamento?", "Sim, desde que essa condição fique explícita no trabalho, com acompanhamento docente."],
   ["Quem paga a impressão do banner?", "A impressão e o custo são do aluno. O banner em papel é a opção de menor custo. Use o modelo oficial disponível no forms."],
+  ["Como participo do sorteio do mini book?", "Retire o voucher de participação durante o evento e preencha o formulário do Google Forms até 13/11, às 19h. Quem for sorteado retira o voucher com a professora Cilene em 13/11, até 21h30."],
+  ["Como compro camiseta, boné ou caneca?", "Pelo WhatsApp (11) 97103-8889, da Macfly Estampas, até 9 de novembro. As peças seguem a arte oficial, sem modificações."],
   ["Onde tiro outras dúvidas?", "Com o representante da sua sala. A comunidade do WhatsApp é um canal de avisos e não recebe mensagens dos participantes."]
 ];
 
@@ -548,7 +625,11 @@ $$(".js-inscricao").forEach(a => {
   if (CONFIG.linkInscricao) { a.href = CONFIG.linkInscricao; a.target = "_blank"; a.rel = "noopener"; a.textContent = "Fazer inscrição"; }
   else { a.setAttribute("aria-disabled","true"); a.removeAttribute("href"); }
 });
-if (CONFIG.linkInscricao) document.querySelector(".js-insc-status").innerHTML = '<span class="url">' + esc(CONFIG.linkInscricao) + '</span>';
+if (CONFIG.linkInscricao) document.querySelector(".js-insc-status").textContent = "Escolha uma atividade até 10 de novembro.";
+$$(".js-sorteio").forEach(a => {
+  if (CONFIG.linkSorteio) { a.href = CONFIG.linkSorteio; a.target = "_blank"; a.rel = "noopener"; a.textContent = "Preencher formulário"; document.querySelector(".js-sorteio-status").textContent = "Inscrição até 13/11, às 19h."; }
+  else { a.setAttribute("aria-disabled","true"); a.removeAttribute("href"); }
+});
 const yt = document.querySelector(".js-youtube");
 if (CONFIG.linkYoutube) { yt.href = CONFIG.linkYoutube; yt.hidden = false; }
 document.querySelector(".js-hora-abertura").innerHTML = CONFIG.horaAbertura ? esc(CONFIG.horaAbertura) : "em breve";
