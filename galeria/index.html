@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fotos · IV Semana da Psicologia — Osasco</title>
+<meta name="description" content="Fotos da IV Semana da Psicologia — Osasco, separadas por dia, sala e tema. Faculdade Nove de Julho, novembro de 2026.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700&family=Mrs+Saint+Delafield&display=swap">
+<style>
+/* Galeria: cabeçalho do site, filtro por dia, índice de seções e grade justificada por seção. Visualizador em tela cheia com download. */
+:root{
+  --bg:#E6DED1; --surface:#F3EDE3; --ink:#1D1B1A; --muted:#5B514B; --line:rgba(29,27,26,.16);
+  --accent:#6B1F2A; --on-accent:#EFE5D6;
+  --serif:"Libre Caslon Text", Georgia, "Times New Roman", serif;
+  --sans:"Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --script:"Mrs Saint Delafield", "Allura", cursive;
+  --wrap:1080px; --row:190px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1D1B1A; --surface:#262321; --ink:#EFE5D6; --muted:#B8AC9E; --line:rgba(239,229,214,.16);
+  --accent:#C25A66; --on-accent:#1D1B1A; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#1D1B1A; --surface:#262321; --ink:#EFE5D6; --muted:#B8AC9E; --line:rgba(239,229,214,.16);
+  --accent:#C25A66; --on-accent:#1D1B1A; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))}
+.label{font-weight:500;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;text-wrap:balance;margin:0}
+p{margin:0}
+.filete{display:block;width:48px;height:2px;background:var(--accent);border:0;margin:0}
+
+.top{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand b{color:var(--accent);font-family:var(--serif);font-weight:400;font-size:16px;letter-spacing:0;margin-right:6px}
+.back{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--muted);white-space:nowrap}
+.back:hover{color:var(--accent)}
+
+.intro .wrap{display:flex;flex-direction:column;gap:18px;padding-block:48px 28px}
+.intro h1{font-size:clamp(38px,6vw,64px);line-height:1.02;letter-spacing:-.01em}
+.intro h1 .script{font-family:var(--script);color:var(--accent);font-size:1.3em;line-height:.6;white-space:nowrap}
+.intro .lead{font-size:17px;max-width:56ch}
+.intro .how{font-size:14px;color:var(--muted);max-width:60ch}
+
+.filters{position:sticky;top:45px;z-index:15;background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.filters .wrap{display:flex;flex-direction:column;gap:10px;padding-block:12px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{min-height:44px;padding:8px 16px;font:600 12px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;border:1.5px solid var(--accent);background:transparent;color:var(--accent);cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--accent);color:var(--on-accent)}
+.tab small{font-weight:500;letter-spacing:.04em;opacity:.8;margin-left:6px}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;font-size:13px;font-weight:500;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:var(--surface);padding:7px 12px;white-space:nowrap}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip span{color:var(--muted);margin-left:6px;font-variant-numeric:tabular-nums}
+
+.dayhead{padding-block:44px 4px}
+.dayhead h2{font-size:clamp(28px,4.2vw,40px);line-height:1.08;margin-top:10px}
+.dayhead .filete{margin-top:14px}
+.group{margin-top:26px;font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+
+.sec{padding-block:26px 8px;scroll-margin-top:150px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+.sec-head .t{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1 1 320px}
+.sec-head h3{font-size:clamp(20px,2.6vw,25px);line-height:1.18}
+.sec-head .who{font-size:14px;font-weight:600}
+.sec-head .n{font-size:13px;color:var(--muted)}
+.sec-head .works{margin:4px 0 2px;padding-left:20px;font-size:14px;line-height:1.45;max-width:62ch}
+.sec-head .works li{margin-bottom:2px}
+.sec-head .works li::marker{color:var(--accent);font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:10px 18px;font:600 12px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--accent);background:var(--accent);color:var(--on-accent);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn:hover{filter:brightness(1.1)}
+.btn[disabled]{opacity:.6;cursor:progress}
+.btn svg{width:16px;height:16px;flex:none}
+
+.grid{display:flex;flex-wrap:wrap;gap:6px}
+.grid::after{content:"";flex-grow:999}
+.ph{position:relative;height:var(--row);flex-grow:calc(var(--r) * 100);flex-basis:calc(var(--r) * var(--row));max-width:100%;padding:0;border:0;background:var(--surface);cursor:zoom-in;overflow:hidden}
+.ph img{display:block;width:100%;height:100%;object-fit:cover}
+.ph:hover img{filter:brightness(1.06)}
+@media (max-width:640px){:root{--row:128px}.grid{gap:4px}.filters{top:43px}.sec{scroll-margin-top:226px}}
+
+.note{margin-top:48px;border-top:1px solid var(--line)}
+.note .wrap{padding-block:22px;font-size:14px;color:var(--muted);max-width:var(--wrap)}
+footer{border-top:1px solid var(--line);margin-top:0}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:28px}
+footer .sig{font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+footer .sig b{color:var(--accent)}
+footer .care{font-family:var(--script);color:var(--accent);font-size:30px;line-height:1}
+
+/* Visualizador */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(18,16,15,.96);display:none;flex-direction:column;color:#EFE5D6}
+.lb.open{display:flex}
+.lb-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px max(12px, env(safe-area-inset-right,0px)) 10px max(12px, env(safe-area-inset-left,0px));padding-top:max(10px, env(safe-area-inset-top,0px))}
+.lb-cap{font-size:13px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lb-cap b{font-weight:600}
+.lb-act{display:flex;gap:8px;flex:none}
+.lb .btn{border-color:#EFE5D6;background:#EFE5D6;color:#1D1B1A;min-height:44px}
+.lb .btn.ghost{background:transparent;color:#EFE5D6}
+.lb-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;position:relative;touch-action:pan-y}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:72px;border:0;background:rgba(239,229,214,.12);color:#EFE5D6;font-size:28px;cursor:pointer}
+.lb-nav:hover{background:rgba(239,229,214,.25)}
+.lb-prev{left:6px}.lb-next{right:6px}
+.lb-foot{text-align:center;font-size:12px;letter-spacing:.14em;padding:8px 8px max(10px, env(safe-area-inset-bottom,0px));color:#BDB2A4;font-variant-numeric:tabular-nums}
+@media (max-width:640px){.lb .btn .tx{display:none}.lb .btn{padding:10px 12px}}
+[hidden]{display:none !important}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../"><b>Ψ</b>IV Semana da Psicologia — Osasco</a>
+    <a class="back" href="../">← Voltar ao site</a>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap">
+    <span class="label">12 e 13 NOV 2026 · Faculdade Nove de Julho · Osasco</span>
+    <h1>Fotos da <span class="script">Semana.</span></h1>
+    <p class="lead">Os registros dos dois dias presenciais, separados por dia, sala e tema. As fotos gerais ficam ao final de cada dia.</p>
+    <p class="how">Toque em uma foto para ampliar e baixar. Cada seção tem um botão para baixar todas as fotos de uma vez.</p>
+  </div>
+</section>
+
+<div class="filters">
+  <div class="wrap">
+    <div class="tabs" role="group" aria-label="Filtrar por dia" id="tabs"></div>
+    <nav class="chips" aria-label="Seções" id="chips"></nav>
+  </div>
+</div>
+
+<main class="wrap" id="main"></main>
+
+<div class="note">
+  <div class="wrap">Aparece em uma foto e prefere que ela saia da galeria? Avise o representante da sua sala.</div>
+</div>
+<footer>
+  <div class="wrap">
+    <span class="sig"><b>FNJ</b> | Semana da Psicologia 2026 · Faculdade Nove de Julho · Osasco</span>
+    <span class="care">Escutar também é uma forma de cuidar.</span>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <div class="lb-bar">
+    <div class="lb-cap" id="lbCap"></div>
+    <div class="lb-act">
+      <a class="btn" id="lbDown" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg><span class="tx">Baixar foto</span></a>
+      <button class="btn ghost" id="lbClose" type="button" aria-label="Fechar">✕<span class="tx">Fechar</span></button>
+    </div>
+  </div>
+  <div class="lb-stage" id="lbStage">
+    <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Foto anterior">‹</button>
+    <img id="lbImg" alt="">
+    <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Próxima foto">›</button>
+  </div>
+  <div class="lb-foot" id="lbFoot"></div>
+</div>
+
+<script>
+/* ============ Dados ============ */
+const DIAS = [
+  { id: "12", rotulo: "12 NOV", label: "12 NOV · Quinta · Presencial", titulo: "Palestras e minicursos." },
+  { id: "13", rotulo: "13 NOV", label: "13 NOV · Sexta · Presencial", titulo: "Apresentação de trabalhos." }
+];
+/* Cada seção: chave usada em FOTOS, dia, grupo, rótulo curto (chip), etiqueta, título e responsável. */
+const SECOES = [
+  {"k": "s201", "dia": "12", "grupo": "Por sala e tema", "chip": "Sala 201", "etq": "Sala 201", "titulo": "Tipos de violência e as consequências no indivíduo", "quem": "Thamyres Santos da Cruz"},
+  {"k": "s202", "dia": "12", "grupo": "Por sala e tema", "chip": "Sala 202", "etq": "Sala 202", "titulo": "Ciclo da violência: desafios, limites e intervenções", "quem": "Patricia Bergantin Soares Paggiaro"},
+  {"k": "s502", "dia": "12", "grupo": "Por sala e tema", "chip": "Sala 502", "etq": "Sala 502", "titulo": "Esquemas mentais e a criação de crenças que impactam o comportamento do indivíduo", "quem": "Valeska da Silva Bohus"},
+  {"k": "s601", "dia": "12", "grupo": "Por sala e tema", "chip": "Sala 601", "etq": "Sala 601", "titulo": "Políticas públicas e as rotas de acesso", "quem": "Ana Letícia Guedes Pereira"},
+  {"k": "s701", "dia": "12", "grupo": "Por sala e tema", "chip": "Sala 701", "etq": "Sala 701", "titulo": "Documentos da(o) psicóloga(o)", "quem": "Caio Vinícius Infante de Melo"},
+  {"k": "s702", "dia": "12", "grupo": "Por sala e tema", "chip": "Sala 702", "etq": "Sala 702", "titulo": "Violência na escola: o papel do psicólogo na prevenção e no enfrentamento", "quem": "Hulda Leia Santana de Almeida"},
+  {"k": "s801", "dia": "12", "grupo": "Por sala e tema", "chip": "Sala 801", "etq": "Sala 801", "titulo": "Violência psicológica e relações abusivas: identificação, acolhimento e intervenção", "quem": "Cilene Telles"},
+  {"k": "s802", "dia": "12", "grupo": "Por sala e tema", "chip": "Sala 802", "etq": "Sala 802", "titulo": "Violência contra crianças e adolescentes: sinais de alerta, escuta e proteção", "quem": "Bernadete Brosso"},
+  {"k": "s901", "dia": "12", "grupo": "Por sala e tema", "chip": "Sala 901", "etq": "Sala 901", "titulo": "Violência digital e controle nas relações: desafios para a Psicologia contemporânea", "quem": "Renato Villela Gallo"},
+  {"k": "slab1", "dia": "12", "grupo": "Por sala e tema", "chip": "Lab I", "etq": "Lab I", "titulo": "Violência de gênero: impactos nos grupos LGBTQIAPN+", "quem": "Gabriela de Souza Rodrigues"},
+  {"k": "recep", "dia": "12", "grupo": "Fotos gerais", "chip": "Recepção", "etq": "Fotos gerais", "titulo": "Recepção dos convidados", "quem": ""},
+  {"k": "bast", "dia": "12", "grupo": "Fotos gerais", "chip": "Bastidores", "etq": "Fotos gerais", "titulo": "Preparação e bastidores", "quem": ""},
+  {"k": "equipe", "dia": "12", "grupo": "Fotos gerais", "chip": "Equipe", "etq": "Fotos gerais", "titulo": "Equipe e comissão", "quem": ""},
+  {"k": "pub12", "dia": "12", "grupo": "Fotos gerais", "chip": "Público", "etq": "Fotos gerais", "titulo": "Público", "quem": ""},
+  {"k": "t601", "dia": "13", "grupo": "Por sala e tema", "chip": "Sala 601", "etq": "Sala 601", "titulo": "Mãe-bebê.", "quem": "", "itens": ["O impacto da depressão pós-parto na relação mãe-bebê", "Maternidade e desamparo: quais os impactos sofridos por mães e filhos atípicos?", "Violência obstétrica e suas repercussões psíquicas na relação inicial entre mãe e bebê"]},
+  {"k": "t602", "dia": "13", "grupo": "Por sala e tema", "chip": "Sala 602", "etq": "Sala 602", "titulo": "Violência.", "quem": "", "itens": ["Impactos do bullying no contexto familiar: implicações emocionais e relacionais", "Negligência infantil na primeira infância", "ABC do bullying"]},
+  {"k": "t701", "dia": "13", "grupo": "Por sala e tema", "chip": "Sala 701", "etq": "Sala 701", "titulo": "Estágio e UCE.", "quem": "", "itens": ["Cyberbullying", "Prevenção e combate à violência contra crianças e adolescentes", "Estágio supervisionado em Psicologia Escolar e Psicoeducativa"]},
+  {"k": "t702", "dia": "13", "grupo": "Por sala e tema", "chip": "Sala 702", "etq": "Sala 702", "titulo": "Identidade e direitos humanos.", "quem": "", "itens": ["O impacto do ambiente escolar e a escuta na construção da identidade dos jovens", "“Depois do medo, vem o mundo”: Psicologia política e a desconstrução do medo institucionalizado em V de Vingança", "Arte que resiste: Psicologia, direitos humanos e cultura antirracista"]},
+  {"k": "pub13", "dia": "13", "grupo": "Fotos gerais", "chip": "Público", "etq": "Fotos gerais", "titulo": "Público e outros registros", "quem": ""},
+  {"k": "equipe13", "dia": "13", "grupo": "Fotos gerais", "chip": "Equipe", "etq": "Fotos gerais", "titulo": "Equipe e bastidores", "quem": ""},
+  {"k": "enc13", "dia": "13", "grupo": "Fotos gerais", "chip": "Encerramento", "etq": "Fotos gerais", "titulo": "Encerramento", "quem": ""}
+];
+/* Lista gerada: { f: arquivo, s: seção, w: largura, h: altura } */
+const FOTOS = [{"f":"d12-sala-201-01.jpg","s":"s201","w":1280,"h":960},{"f":"d12-sala-201-02.jpg","s":"s201","w":1600,"h":900},{"f":"d12-sala-201-03.jpg","s":"s201","w":1600,"h":900},{"f":"d12-sala-201-04.jpg","s":"s201","w":1600,"h":900},{"f":"d12-sala-202-01.jpg","s":"s202","w":1600,"h":900},{"f":"d12-sala-202-02.jpg","s":"s202","w":1600,"h":900},{"f":"d12-sala-202-03.jpg","s":"s202","w":900,"h":1600},{"f":"d12-sala-202-04.jpg","s":"s202","w":900,"h":1600},{"f":"d12-sala-202-05.jpg","s":"s202","w":1600,"h":900},{"f":"d12-sala-202-06.jpg","s":"s202","w":1200,"h":1600},{"f":"d12-sala-202-07.jpg","s":"s202","w":1600,"h":1200},{"f":"d12-sala-202-08.jpg","s":"s202","w":1600,"h":900},{"f":"d12-sala-202-09.jpg","s":"s202","w":1200,"h":1600},{"f":"d12-sala-202-10.jpg","s":"s202","w":1200,"h":1600},{"f":"d12-sala-202-11.jpg","s":"s202","w":1600,"h":900},{"f":"d12-sala-202-12.jpg","s":"s202","w":1600,"h":900},{"f":"d12-sala-202-13.jpg","s":"s202","w":1200,"h":1600},{"f":"d12-sala-202-14.jpg","s":"s202","w":1200,"h":1600},{"f":"d12-sala-202-15.jpg","s":"s202","w":1200,"h":1600},{"f":"d12-sala-202-16.jpg","s":"s202","w":1200,"h":1600},{"f":"d12-sala-202-17.jpg","s":"s202","w":1200,"h":1600},{"f":"d12-sala-202-18.jpg","s":"s202","w":1200,"h":1600},{"f":"d12-sala-202-19.jpg","s":"s202","w":960,"h":1280},{"f":"d12-sala-202-20.jpg","s":"s202","w":960,"h":1280},{"f":"d12-sala-202-21.jpg","s":"s202","w":1280,"h":960},{"f":"d12-sala-202-22.jpg","s":"s202","w":960,"h":1280},{"f":"d12-sala-202-23.jpg","s":"s202","w":960,"h":1280},{"f":"d12-sala-202-24.jpg","s":"s202","w":960,"h":1280},{"f":"d12-sala-202-25.jpg","s":"s202","w":960,"h":1280},{"f":"d12-sala-202-26.jpg","s":"s202","w":1280,"h":960},{"f":"d12-sala-202-27.jpg","s":"s202","w":1280,"h":960},{"f":"d12-sala-202-28.jpg","s":"s202","w":960,"h":1280},{"f":"d12-sala-202-29.jpg","s":"s202","w":960,"h":1280},{"f":"d12-sala-202-30.jpg","s":"s202","w":960,"h":1280},{"f":"d12-sala-202-31.jpg","s":"s202","w":960,"h":1280},{"f":"d12-sala-202-32.jpg","s":"s202","w":960,"h":1280},{"f":"d12-sala-202-33.jpg","s":"s202","w":960,"h":1280},{"f":"d12-sala-202-34.jpg","s":"s202","w":1280,"h":960},{"f":"d12-sala-202-35.jpg","s":"s202","w":960,"h":1280},{"f":"d12-sala-502-01.jpg","s":"s502","w":1280,"h":960},{"f":"d12-sala-502-02.jpg","s":"s502","w":1280,"h":960},{"f":"d12-sala-502-03.jpg","s":"s502","w":1280,"h":960},{"f":"d12-sala-502-04.jpg","s":"s502","w":1280,"h":960},{"f":"d12-sala-502-05.jpg","s":"s502","w":1280,"h":960},{"f":"d12-sala-601-01.jpg","s":"s601","w":960,"h":1280},{"f":"d12-sala-601-02.jpg","s":"s601","w":960,"h":1280},{"f":"d12-sala-601-03.jpg","s":"s601","w":960,"h":1280},{"f":"d12-sala-601-04.jpg","s":"s601","w":960,"h":1280},{"f":"d12-sala-601-05.jpg","s":"s601","w":960,"h":1280},{"f":"d12-sala-601-06.jpg","s":"s601","w":960,"h":1280},{"f":"d12-sala-601-07.jpg","s":"s601","w":960,"h":1280},{"f":"d12-sala-601-08.jpg","s":"s601","w":960,"h":1280},{"f":"d12-sala-601-09.jpg","s":"s601","w":960,"h":1280},{"f":"d12-sala-601-10.jpg","s":"s601","w":960,"h":1280},{"f":"d12-sala-601-11.jpg","s":"s601","w":960,"h":1280},{"f":"d12-sala-601-12.jpg","s":"s601","w":1600,"h":1200},{"f":"d12-sala-601-13.jpg","s":"s601","w":1600,"h":1200},{"f":"d12-sala-701-01.jpg","s":"s701","w":900,"h":1600},{"f":"d12-sala-701-02.jpg","s":"s701","w":900,"h":1600},{"f":"d12-sala-701-03.jpg","s":"s701","w":900,"h":1600},{"f":"d12-sala-701-04.jpg","s":"s701","w":1600,"h":900},{"f":"d12-sala-701-05.jpg","s":"s701","w":1600,"h":1200},{"f":"d12-sala-701-06.jpg","s":"s701","w":1600,"h":1200},{"f":"d12-sala-701-07.jpg","s":"s701","w":1600,"h":1200},{"f":"d12-sala-701-08.jpg","s":"s701","w":1600,"h":1200},{"f":"d12-sala-701-09.jpg","s":"s701","w":1600,"h":1200},{"f":"d12-sala-701-10.jpg","s":"s701","w":1200,"h":1600},{"f":"d12-sala-701-11.jpg","s":"s701","w":1200,"h":1600},{"f":"d12-sala-701-12.jpg","s":"s701","w":1200,"h":1600},{"f":"d12-sala-702-01.jpg","s":"s702","w":1600,"h":1200},{"f":"d12-sala-702-02.jpg","s":"s702","w":1600,"h":1200},{"f":"d12-sala-702-03.jpg","s":"s702","w":1600,"h":1200},{"f":"d12-sala-702-04.jpg","s":"s702","w":1600,"h":1200},{"f":"d12-sala-702-05.jpg","s":"s702","w":1600,"h":1200},{"f":"d12-sala-702-06.jpg","s":"s702","w":1600,"h":1200},{"f":"d12-sala-801-01.jpg","s":"s801","w":1600,"h":900},{"f":"d12-sala-801-02.jpg","s":"s801","w":1280,"h":1193},{"f":"d12-sala-801-03.jpg","s":"s801","w":1600,"h":1235},{"f":"d12-sala-801-04.jpg","s":"s801","w":900,"h":1600},{"f":"d12-sala-801-05.jpg","s":"s801","w":900,"h":1600},{"f":"d12-sala-802-01.jpg","s":"s802","w":1600,"h":1200},{"f":"d12-sala-802-02.jpg","s":"s802","w":1600,"h":1200},{"f":"d12-sala-802-03.jpg","s":"s802","w":1280,"h":960},{"f":"d12-sala-802-04.jpg","s":"s802","w":1280,"h":960},{"f":"d12-sala-802-05.jpg","s":"s802","w":1280,"h":960},{"f":"d12-sala-901-01.jpg","s":"s901","w":900,"h":1600},{"f":"d12-sala-901-02.jpg","s":"s901","w":1600,"h":900},{"f":"d12-sala-901-03.jpg","s":"s901","w":1600,"h":900},{"f":"d12-sala-901-04.jpg","s":"s901","w":900,"h":1600},{"f":"d12-sala-901-05.jpg","s":"s901","w":1600,"h":900},{"f":"d12-lab-1-01.jpg","s":"slab1","w":899,"h":1599},{"f":"d12-lab-1-02.jpg","s":"slab1","w":1152,"h":2048},{"f":"d12-lab-1-03.jpg","s":"slab1","w":1152,"h":2048},{"f":"d12-lab-1-04.jpg","s":"slab1","w":1152,"h":2048},{"f":"d12-lab-1-05.jpg","s":"slab1","w":1152,"h":2048},{"f":"d12-lab-1-06.jpg","s":"slab1","w":1152,"h":2048},{"f":"d12-lab-1-07.jpg","s":"slab1","w":1280,"h":720},{"f":"d12-lab-1-08.jpg","s":"slab1","w":1152,"h":2048},{"f":"d12-lab-1-09.jpg","s":"slab1","w":1152,"h":2048},{"f":"d12-lab-1-10.jpg","s":"slab1","w":1152,"h":2048},{"f":"d12-lab-1-11.jpg","s":"slab1","w":2048,"h":1152},{"f":"d12-lab-1-12.jpg","s":"slab1","w":2048,"h":1152},{"f":"d12-lab-1-13.jpg","s":"slab1","w":2048,"h":1152},{"f":"d12-lab-1-14.jpg","s":"slab1","w":2048,"h":1152},{"f":"d12-lab-1-15.jpg","s":"slab1","w":2048,"h":1152},{"f":"d12-lab-1-16.jpg","s":"slab1","w":1152,"h":2048},{"f":"d12-lab-1-17.jpg","s":"slab1","w":1152,"h":2048},{"f":"d12-lab-1-18.jpg","s":"slab1","w":1152,"h":2048},{"f":"d12-lab-1-19.jpg","s":"slab1","w":1152,"h":2048},{"f":"d12-lab-1-20.jpg","s":"slab1","w":1152,"h":2048},{"f":"d12-lab-1-21.jpg","s":"slab1","w":1152,"h":2048},{"f":"d12-lab-1-22.jpg","s":"slab1","w":1152,"h":2048},{"f":"d12-lab-1-23.jpg","s":"slab1","w":1152,"h":2048},{"f":"d12-lab-1-24.jpg","s":"slab1","w":900,"h":1600},{"f":"d12-lab-1-25.jpg","s":"slab1","w":1600,"h":900},{"f":"d12-recepcao-01.jpg","s":"recep","w":720,"h":1600},{"f":"d12-recepcao-02.jpg","s":"recep","w":1600,"h":900},{"f":"d12-recepcao-03.jpg","s":"recep","w":1600,"h":900},{"f":"d12-recepcao-04.jpg","s":"recep","w":1600,"h":900},{"f":"d12-recepcao-05.jpg","s":"recep","w":1600,"h":900},{"f":"d12-recepcao-06.jpg","s":"recep","w":1600,"h":900},{"f":"d12-recepcao-07.jpg","s":"recep","w":1600,"h":900},{"f":"d12-recepcao-08.jpg","s":"recep","w":900,"h":1600},{"f":"d12-recepcao-09.jpg","s":"recep","w":1600,"h":1200},{"f":"d12-recepcao-10.jpg","s":"recep","w":1600,"h":1200},{"f":"d12-recepcao-11.jpg","s":"recep","w":1600,"h":1200},{"f":"d12-recepcao-12.jpg","s":"recep","w":900,"h":1600},{"f":"d12-recepcao-13.jpg","s":"recep","w":900,"h":1600},{"f":"d12-recepcao-14.jpg","s":"recep","w":1600,"h":900},{"f":"d12-recepcao-15.jpg","s":"recep","w":900,"h":1600},{"f":"d12-bastidores-01.jpg","s":"bast","w":900,"h":1600},{"f":"d12-bastidores-02.jpg","s":"bast","w":900,"h":1600},{"f":"d12-bastidores-03.jpg","s":"bast","w":1280,"h":960},{"f":"d12-bastidores-04.jpg","s":"bast","w":960,"h":1280},{"f":"d12-bastidores-05.jpg","s":"bast","w":1280,"h":960},{"f":"d12-bastidores-06.jpg","s":"bast","w":900,"h":1600},{"f":"d12-bastidores-07.jpg","s":"bast","w":1600,"h":900},{"f":"d12-bastidores-08.jpg","s":"bast","w":900,"h":1600},{"f":"d12-bastidores-09.jpg","s":"bast","w":900,"h":1600},{"f":"d12-bastidores-10.jpg","s":"bast","w":900,"h":1600},{"f":"d12-bastidores-11.jpg","s":"bast","w":720,"h":1280},{"f":"d12-equipe-01.jpg","s":"equipe","w":900,"h":1600},{"f":"d12-equipe-02.jpg","s":"equipe","w":1600,"h":738},{"f":"d12-equipe-03.jpg","s":"equipe","w":1600,"h":738},{"f":"d12-equipe-04.jpg","s":"equipe","w":900,"h":1600},{"f":"d12-equipe-05.jpg","s":"equipe","w":900,"h":1600},{"f":"d12-equipe-06.jpg","s":"equipe","w":900,"h":1600},{"f":"d12-equipe-07.jpg","s":"equipe","w":900,"h":1600},{"f":"d12-equipe-08.jpg","s":"equipe","w":1600,"h":900},{"f":"d12-equipe-09.jpg","s":"equipe","w":1152,"h":2048},{"f":"d12-equipe-10.jpg","s":"equipe","w":1152,"h":2048},{"f":"d12-equipe-11.jpg","s":"equipe","w":1200,"h":1600},{"f":"d12-equipe-12.jpg","s":"equipe","w":1280,"h":720},{"f":"d12-equipe-13.jpg","s":"equipe","w":1600,"h":1200},{"f":"d12-equipe-14.jpg","s":"equipe","w":1600,"h":900},{"f":"d12-equipe-15.jpg","s":"equipe","w":1200,"h":1600},{"f":"d12-equipe-16.jpg","s":"equipe","w":1600,"h":1200},{"f":"d12-equipe-17.jpg","s":"equipe","w":1280,"h":960},{"f":"d12-equipe-18.jpg","s":"equipe","w":1280,"h":720},{"f":"d12-equipe-19.jpg","s":"equipe","w":1200,"h":1600},{"f":"d12-equipe-20.jpg","s":"equipe","w":900,"h":1600},{"f":"d12-equipe-21.jpg","s":"equipe","w":1600,"h":900},{"f":"d12-equipe-22.jpg","s":"equipe","w":1600,"h":900},{"f":"d12-equipe-23.jpg","s":"equipe","w":1600,"h":900},{"f":"d12-equipe-24.jpg","s":"equipe","w":1600,"h":1200},{"f":"d12-equipe-25.jpg","s":"equipe","w":900,"h":1600},{"f":"d12-equipe-26.jpg","s":"equipe","w":1600,"h":1200},{"f":"d12-equipe-27.jpg","s":"equipe","w":1600,"h":1200},{"f":"d12-equipe-28.jpg","s":"equipe","w":900,"h":1600},{"f":"d12-equipe-29.jpg","s":"equipe","w":1600,"h":1200},{"f":"d12-publico-01.jpg","s":"pub12","w":1600,"h":938},{"f":"d12-publico-02.jpg","s":"pub12","w":1280,"h":960},{"f":"d13-sala-601-01.jpg","s":"t601","w":960,"h":1280},{"f":"d13-sala-601-02.jpg","s":"t601","w":960,"h":1280},{"f":"d13-sala-601-03.jpg","s":"t601","w":960,"h":1280},{"f":"d13-sala-601-04.jpg","s":"t601","w":739,"h":1600},{"f":"d13-sala-601-05.jpg","s":"t601","w":1280,"h":720},{"f":"d13-sala-601-06.jpg","s":"t601","w":1280,"h":720},{"f":"d13-sala-601-07.jpg","s":"t601","w":1280,"h":720},{"f":"d13-sala-601-08.jpg","s":"t601","w":739,"h":1600},{"f":"d13-sala-601-09.jpg","s":"t601","w":739,"h":1600},{"f":"d13-sala-602-01.jpg","s":"t602","w":1152,"h":2048},{"f":"d13-sala-602-02.jpg","s":"t602","w":1152,"h":2048},{"f":"d13-sala-602-03.jpg","s":"t602","w":1152,"h":2048},{"f":"d13-sala-602-04.jpg","s":"t602","w":1152,"h":2048},{"f":"d13-sala-602-05.jpg","s":"t602","w":1152,"h":2048},{"f":"d13-sala-602-06.jpg","s":"t602","w":1152,"h":2048},{"f":"d13-sala-602-07.jpg","s":"t602","w":1280,"h":720},{"f":"d13-sala-602-08.jpg","s":"t602","w":1280,"h":720},{"f":"d13-sala-602-09.jpg","s":"t602","w":1280,"h":720},{"f":"d13-sala-602-10.jpg","s":"t602","w":1280,"h":720},{"f":"d13-sala-602-11.jpg","s":"t602","w":1152,"h":2048},{"f":"d13-sala-602-12.jpg","s":"t602","w":2048,"h":1152},{"f":"d13-sala-602-13.jpg","s":"t602","w":1280,"h":720},{"f":"d13-sala-602-14.jpg","s":"t602","w":1280,"h":720},{"f":"d13-sala-602-15.jpg","s":"t602","w":2048,"h":1152},{"f":"d13-sala-701-01.jpg","s":"t701","w":1600,"h":1200},{"f":"d13-sala-701-02.jpg","s":"t701","w":1200,"h":1600},{"f":"d13-sala-701-03.jpg","s":"t701","w":1600,"h":900},{"f":"d13-sala-701-04.jpg","s":"t701","w":900,"h":1600},{"f":"d13-sala-701-05.jpg","s":"t701","w":1600,"h":1200},{"f":"d13-sala-701-06.jpg","s":"t701","w":1600,"h":900},{"f":"d13-sala-701-07.jpg","s":"t701","w":1600,"h":738},{"f":"d13-sala-701-08.jpg","s":"t701","w":1600,"h":738},{"f":"d13-sala-701-09.jpg","s":"t701","w":1200,"h":1600},{"f":"d13-sala-701-10.jpg","s":"t701","w":1600,"h":900},{"f":"d13-sala-701-11.jpg","s":"t701","w":2048,"h":1152},{"f":"d13-sala-701-12.jpg","s":"t701","w":1600,"h":1200},{"f":"d13-sala-701-13.jpg","s":"t701","w":1600,"h":900},{"f":"d13-sala-701-14.jpg","s":"t701","w":900,"h":1600},{"f":"d13-sala-701-15.jpg","s":"t701","w":900,"h":1600},{"f":"d13-sala-701-16.jpg","s":"t701","w":1600,"h":900},{"f":"d13-sala-701-17.jpg","s":"t701","w":2048,"h":1152},{"f":"d13-sala-701-18.jpg","s":"t701","w":1152,"h":2048},{"f":"d13-sala-702-01.jpg","s":"t702","w":1152,"h":2048},{"f":"d13-sala-702-02.jpg","s":"t702","w":900,"h":1600},{"f":"d13-sala-702-03.jpg","s":"t702","w":960,"h":1280},{"f":"d13-sala-702-04.jpg","s":"t702","w":1280,"h":720},{"f":"d13-sala-702-05.jpg","s":"t702","w":900,"h":1600},{"f":"d13-sala-702-06.jpg","s":"t702","w":900,"h":1600},{"f":"d13-sala-702-07.jpg","s":"t702","w":739,"h":1600},{"f":"d13-sala-702-08.jpg","s":"t702","w":739,"h":1600},{"f":"d13-sala-702-09.jpg","s":"t702","w":739,"h":1600},{"f":"d13-sala-702-10.jpg","s":"t702","w":900,"h":1600},{"f":"d13-sala-702-11.jpg","s":"t702","w":720,"h":1280},{"f":"d13-sala-702-12.jpg","s":"t702","w":1600,"h":1200},{"f":"d13-sala-702-13.jpg","s":"t702","w":1600,"h":1200},{"f":"d13-sala-702-14.jpg","s":"t702","w":1600,"h":1200},{"f":"d13-sala-702-15.jpg","s":"t702","w":1600,"h":1200},{"f":"d13-sala-702-16.jpg","s":"t702","w":1600,"h":1200},{"f":"d13-sala-702-17.jpg","s":"t702","w":720,"h":1280},{"f":"d13-sala-702-18.jpg","s":"t702","w":900,"h":1600},{"f":"d13-sala-702-19.jpg","s":"t702","w":1200,"h":1600},{"f":"d13-sala-702-20.jpg","s":"t702","w":900,"h":1600},{"f":"d13-sala-702-21.jpg","s":"t702","w":1600,"h":1200},{"f":"d13-sala-702-22.jpg","s":"t702","w":1280,"h":720},{"f":"d13-sala-702-23.jpg","s":"t702","w":1280,"h":720},{"f":"d13-sala-702-24.jpg","s":"t702","w":1280,"h":720},{"f":"d13-sala-702-25.jpg","s":"t702","w":1152,"h":2048},{"f":"d13-publico-01.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-publico-02.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-publico-03.jpg","s":"pub13","w":2048,"h":1152},{"f":"d13-publico-04.jpg","s":"pub13","w":2048,"h":1152},{"f":"d13-publico-05.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-publico-06.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-publico-07.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-publico-08.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-publico-09.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-publico-10.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-publico-11.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-12.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-publico-13.jpg","s":"pub13","w":2048,"h":1152},{"f":"d13-publico-14.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-15.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-16.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-17.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-18.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-19.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-20.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-21.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-22.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-23.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-24.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-26.jpg","s":"pub13","w":1280,"h":960},{"f":"d13-publico-27.jpg","s":"pub13","w":1280,"h":720},{"f":"d13-publico-28.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-29.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-30.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-31.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-32.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-33.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-34.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-35.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-36.jpg","s":"pub13","w":1600,"h":1200},{"f":"d13-publico-37.jpg","s":"pub13","w":1151,"h":2048},{"f":"d13-publico-38.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-publico-39.jpg","s":"pub13","w":2048,"h":1152},{"f":"d13-publico-40.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-publico-41.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-publico-42.jpg","s":"pub13","w":2048,"h":1151},{"f":"d13-publico-43.jpg","s":"pub13","w":1151,"h":2048},{"f":"d13-publico-44.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-publico-45.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-publico-46.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-publico-47.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-publico-48.jpg","s":"pub13","w":1152,"h":2048},{"f":"d13-equipe-01.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-02.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-03.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-04.jpg","s":"equipe13","w":2048,"h":1152},{"f":"d13-equipe-05.jpg","s":"equipe13","w":2048,"h":1152},{"f":"d13-equipe-06.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-07.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-08.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-09.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-10.jpg","s":"equipe13","w":2048,"h":1152},{"f":"d13-equipe-11.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-12.jpg","s":"equipe13","w":2048,"h":1152},{"f":"d13-equipe-13.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-14.jpg","s":"equipe13","w":2048,"h":1152},{"f":"d13-equipe-15.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-16.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-17.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-18.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-19.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-20.jpg","s":"equipe13","w":2048,"h":1152},{"f":"d13-equipe-21.jpg","s":"equipe13","w":2048,"h":1152},{"f":"d13-equipe-22.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-23.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-24.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-25.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-26.jpg","s":"equipe13","w":960,"h":1280},{"f":"d13-equipe-27.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-equipe-28.jpg","s":"equipe13","w":2048,"h":1152},{"f":"d13-equipe-29.jpg","s":"equipe13","w":2048,"h":1152},{"f":"d13-equipe-30.jpg","s":"equipe13","w":1152,"h":2048},{"f":"d13-encerramento-01.jpg","s":"enc13","w":960,"h":1280},{"f":"d13-encerramento-02.jpg","s":"enc13","w":960,"h":1280},{"f":"d13-encerramento-03.jpg","s":"enc13","w":1280,"h":960},{"f":"d13-encerramento-04.jpg","s":"enc13","w":1280,"h":960},{"f":"d13-encerramento-05.jpg","s":"enc13","w":1599,"h":899},{"f":"d13-encerramento-06.jpg","s":"enc13","w":1599,"h":899},{"f":"d13-encerramento-07.jpg","s":"enc13","w":1599,"h":899},{"f":"d13-encerramento-08.jpg","s":"enc13","w":1599,"h":899},{"f":"d13-encerramento-09.jpg","s":"enc13","w":1599,"h":899},{"f":"d13-encerramento-10.jpg","s":"enc13","w":1599,"h":899},{"f":"d13-encerramento-11.jpg","s":"enc13","w":1599,"h":899},{"f":"d13-encerramento-12.jpg","s":"enc13","w":1599,"h":899},{"f":"d13-encerramento-13.jpg","s":"enc13","w":1599,"h":899},{"f":"d13-encerramento-14.jpg","s":"enc13","w":1599,"h":899},{"f":"d13-encerramento-15.jpg","s":"enc13","w":1599,"h":899},{"f":"d13-encerramento-16.jpg","s":"enc13","w":1599,"h":899},{"f":"d13-encerramento-17.jpg","s":"enc13","w":1599,"h":899},{"f":"d13-encerramento-18.jpg","s":"enc13","w":1599,"h":899},{"f":"d13-encerramento-19.jpg","s":"enc13","w":1599,"h":899},{"f":"d13-encerramento-20.jpg","s":"enc13","w":899,"h":1599},{"f":"d13-encerramento-21.jpg","s":"enc13","w":1600,"h":1200},{"f":"d13-encerramento-22.jpg","s":"enc13","w":899,"h":1599},{"f":"d13-encerramento-23.jpg","s":"enc13","w":1600,"h":1200},{"f":"d13-encerramento-24.jpg","s":"enc13","w":899,"h":1599},{"f":"d13-encerramento-25.jpg","s":"enc13","w":899,"h":1599},{"f":"d13-encerramento-26.jpg","s":"enc13","w":1600,"h":1200},{"f":"d13-encerramento-27.jpg","s":"enc13","w":1600,"h":1200},{"f":"d13-encerramento-28.jpg","s":"enc13","w":1600,"h":1200}];
+/* ============ fim dos dados ============ */
+
+const $ = (s, r) => (r || document).querySelector(s);
+const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const porSecao = {};
+FOTOS.forEach((p) => { (porSecao[p.s] = porSecao[p.s] || []).push(p); });
+const secoes = SECOES.filter((s) => (porSecao[s.k] || []).length);
+const nomeArquivo = (p) => "semana-psicologia-fnj-" + p.f.replace(/^d(\d\d)-/, "$1nov-");
+const ICO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>';
+
+/* Montagem */
+let diaAtual = "todos";
+const ordem = []; /* fotos na ordem em que aparecem, para o visualizador */
+function montar() {
+  const main = $("#main"); let html = ""; ordem.length = 0;
+  DIAS.forEach((d) => {
+    const ss = secoes.filter((s) => s.dia === d.id);
+    if (!ss.length || (diaAtual !== "todos" && diaAtual !== d.id)) return;
+    const total = ss.reduce((n, s) => n + porSecao[s.k].length, 0);
+    html += '<div class="dayhead"><span class="label">' + esc(d.label) + " · " + total + ' fotos</span><h2>' + esc(d.titulo) + '</h2><hr class="filete"></div>';
+    let grupo = "";
+    ss.forEach((s) => {
+      if (s.grupo !== grupo) { grupo = s.grupo; html += '<div class="group">' + esc(grupo) + "</div>"; }
+      const ps = porSecao[s.k];
+      html += '<section class="sec" id="' + s.k + '"><div class="sec-head"><div class="t">' +
+        '<span class="label">' + esc(d.rotulo + " · " + s.etq) + "</span><h3>" + esc(s.titulo) + "</h3>" +
+        (s.quem ? '<span class="who">' + esc(s.quem) + "</span>" : "") +
+        (s.itens ? '<ol class="works">' + s.itens.map((x) => "<li>" + esc(x) + "</li>").join("") + "</ol>" : "") +
+        '<span class="n">' + ps.length + (ps.length === 1 ? " foto" : " fotos") + "</span></div>" +
+        '<button class="btn ghost js-zip" type="button" data-k="' + s.k + '">' + ICO + "<span>Baixar a seção</span></button></div>" +
+        '<div class="grid">';
+      ps.forEach((p, i) => {
+        const idx = ordem.push({ p: p, s: s, d: d, i: i }) - 1;
+        html += '<button class="ph" type="button" data-i="' + idx + '" style="--r:' + (p.w / p.h).toFixed(3) + '" aria-label="Ampliar foto ' + (i + 1) + " de " + ps.length + ", " + esc(s.titulo) + '">' +
+          '<img loading="lazy" decoding="async" src="thumb/' + p.f + '" width="' + p.w + '" height="' + p.h + '" alt="' + esc(s.titulo + ", foto " + (i + 1)) + '"></button>';
+      });
+      html += "</div></section>";
+    });
+  });
+  main.innerHTML = html;
+  let chips = "";
+  secoes.filter((s) => diaAtual === "todos" || s.dia === diaAtual).forEach((s) => {
+    chips += '<a class="chip" href="#' + s.k + '">' + esc((diaAtual === "todos" ? s.dia + "/11 · " : "") + s.chip) + "<span>" + porSecao[s.k].length + "</span></a>";
+  });
+  $("#chips").innerHTML = chips;
+}
+function montarAbas() {
+  const n = (d) => secoes.filter((s) => s.dia === d).reduce((t, s) => t + porSecao[s.k].length, 0);
+  const abas = [["todos", "Todos os dias", FOTOS.length]].concat(DIAS.map((d) => [d.id, d.rotulo, n(d.id)]));
+  $("#tabs").innerHTML = abas.map((a) => '<button class="tab" type="button" data-d="' + a[0] + '" aria-pressed="' + (a[0] === diaAtual) + '">' + a[1] + "<small>" + a[2] + "</small></button>").join("");
+}
+$("#tabs").addEventListener("click", (e) => {
+  const b = e.target.closest(".tab"); if (!b) return;
+  diaAtual = b.dataset.d; montarAbas(); montar();
+  window.scrollTo({ top: $(".filters").offsetTop - 44 });
+});
+
+/* Visualizador */
+const lb = $("#lb"); let atual = -1, quemAbriu = null;
+function mostrar(i) {
+  if (i < 0 || i >= ordem.length) return;
+  atual = i; const o = ordem[i];
+  $("#lbImg").src = "img/" + o.p.f; $("#lbImg").alt = o.s.titulo + ", foto " + (o.i + 1);
+  $("#lbCap").innerHTML = "<b>" + esc(o.d.rotulo + " · " + (o.s.etq === "Fotos gerais" ? o.s.titulo : o.s.etq)) + "</b>" + (o.s.etq !== "Fotos gerais" ? " · " + esc(o.s.titulo.replace(/\.$/, "")) : "");
+  const a = $("#lbDown"); a.href = "img/" + o.p.f; a.setAttribute("download", nomeArquivo(o.p));
+  $("#lbFoot").textContent = (o.i + 1) + " / " + porSecao[o.s.k].length;
+  $("#lbPrev").hidden = i === 0; $("#lbNext").hidden = i === ordem.length - 1;
+  [i - 1, i + 1].forEach((j) => { if (ordem[j]) { new Image().src = "img/" + ordem[j].p.f; } });
+}
+function abrir(i, origem) { quemAbriu = origem; lb.classList.add("open"); document.body.style.overflow = "hidden"; mostrar(i); $("#lbClose").focus(); }
+function fechar() { lb.classList.remove("open"); document.body.style.overflow = ""; $("#lbImg").removeAttribute("src"); if (quemAbriu) quemAbriu.focus(); }
+$("#main").addEventListener("click", (e) => {
+  const ph = e.target.closest(".ph"); if (ph) { abrir(+ph.dataset.i, ph); return; }
+  const z = e.target.closest(".js-zip"); if (z) baixarSecao(z);
+});
+$("#lbClose").addEventListener("click", fechar);
+$("#lbPrev").addEventListener("click", () => mostrar(atual - 1));
+$("#lbNext").addEventListener("click", () => mostrar(atual + 1));
+$("#lbStage").addEventListener("click", (e) => { if (e.target === e.currentTarget) fechar(); });
+document.addEventListener("keydown", (e) => {
+  if (!lb.classList.contains("open")) return;
+  if (e.key === "Escape") fechar(); else if (e.key === "ArrowLeft") mostrar(atual - 1); else if (e.key === "ArrowRight") mostrar(atual + 1);
+});
+let tx = null;
+$("#lbStage").addEventListener("touchstart", (e) => { tx = e.touches[0].clientX; }, { passive: true });
+$("#lbStage").addEventListener("touchend", (e) => {
+  if (tx === null) return; const dx = e.changedTouches[0].clientX - tx; tx = null;
+  if (Math.abs(dx) > 50) mostrar(atual + (dx < 0 ? 1 : -1));
+});
+
+/* Download da seção: monta um .zip no próprio navegador, sem compressão (as fotos já são JPG). */
+const CRC = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+function crc32(u8) { let c = 0xFFFFFFFF; for (let i = 0; i < u8.length; i++) c = CRC[(c ^ u8[i]) & 0xFF] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+function zipar(arquivos) {
+  const enc = new TextEncoder(), partes = [], central = []; let offset = 0;
+  const agora = new Date();
+  const hora = (agora.getHours() << 11) | (agora.getMinutes() << 5) | (agora.getSeconds() >> 1);
+  const data = ((agora.getFullYear() - 1980) << 9) | ((agora.getMonth() + 1) << 5) | agora.getDate();
+  arquivos.forEach((a) => {
+    const nome = enc.encode(a.nome), crc = crc32(a.dados), n = a.dados.length;
+    const lh = new DataView(new ArrayBuffer(30));
+    lh.setUint32(0, 0x04034b50, true); lh.setUint16(4, 20, true); lh.setUint16(6, 0x0800, true); lh.setUint16(8, 0, true);
+    lh.setUint16(10, hora, true); lh.setUint16(12, data, true); lh.setUint32(14, crc, true); lh.setUint32(18, n, true); lh.setUint32(22, n, true);
+    lh.setUint16(26, nome.length, true); lh.setUint16(28, 0, true);
+    partes.push(lh.buffer, nome, a.dados);
+    const ch = new DataView(new ArrayBuffer(46));
+    ch.setUint32(0, 0x02014b50, true); ch.setUint16(4, 20, true); ch.setUint16(6, 20, true); ch.setUint16(8, 0x0800, true); ch.setUint16(10, 0, true);
+    ch.setUint16(12, hora, true); ch.setUint16(14, data, true); ch.setUint32(16, crc, true); ch.setUint32(20, n, true); ch.setUint32(24, n, true);
+    ch.setUint16(28, nome.length, true); ch.setUint32(42, offset, true);
+    central.push(ch.buffer, nome);
+    offset += 30 + nome.length + n;
+  });
+  const tamCentral = central.reduce((t, b) => t + (b.byteLength), 0);
+  const fim = new DataView(new ArrayBuffer(22));
+  fim.setUint32(0, 0x06054b50, true); fim.setUint16(8, arquivos.length, true); fim.setUint16(10, arquivos.length, true);
+  fim.setUint32(12, tamCentral, true); fim.setUint32(16, offset, true);
+  return new Blob(partes.concat(central, [fim.buffer]), { type: "application/zip" });
+}
+async function baixarSecao(btn) {
+  const k = btn.dataset.k, ps = porSecao[k], rot = btn.querySelector("span"), antes = rot.textContent;
+  btn.disabled = true;
+  try {
+    const arquivos = []; let feitos = 0;
+    const fila = ps.slice();
+    const um = async () => {
+      while (fila.length) {
+        const p = fila.shift();
+        const r = await fetch("img/" + p.f); if (!r.ok) throw new Error(p.f);
+        arquivos.push({ nome: nomeArquivo(p), dados: new Uint8Array(await r.arrayBuffer()) });
+        rot.textContent = "Preparando " + (++feitos) + " de " + ps.length;
+      }
+    };
+    await Promise.all([um(), um(), um(), um()]);
+    arquivos.sort((a, b) => a.nome < b.nome ? -1 : 1);
+    const url = URL.createObjectURL(zipar(arquivos));
+    const a = document.createElement("a"); a.href = url; a.download = "semana-psicologia-fnj-" + ps[0].f.replace(/^d(\d\d)-/, "$1nov-").replace(/-\d+\.jpg$/, "") + ".zip";
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 60000);
+    rot.textContent = "Download iniciado";
+  } catch (err) {
+    rot.textContent = "Não foi possível baixar. Tente de novo.";
+  }
+  setTimeout(() => { rot.textContent = antes; btn.disabled = false; }, 2500);
+}
+
+montarAbas(); montar();
+</script>
+</body>
+</html>

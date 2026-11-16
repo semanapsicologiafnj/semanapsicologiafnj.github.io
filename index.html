@@ -239,6 +239,7 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
   <div class="wrap">
     <a class="brand" href="#inicio"><b>Ψ</b>IV Semana da Psicologia — Osasco</a>
     <nav class="nav" aria-label="Seções">
+      <a href="galeria/">Fotos</a>
       <a href="#avisos">Avisos</a>
       <a href="#abertura">11/11</a>
       <a href="#palestras">12/11</a>
@@ -259,7 +260,8 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
         <h1>Nem toda violência deixa marcas <span class="script">visíveis.</span></h1>
         <p class="lead">Três dias para pensar a violência e o lugar da Psicologia diante dela.</p>
         <div class="actions">
-          <a class="btn js-inscricao" href="#inscricoes">Inscrições a partir de 6/11</a>
+          <a class="btn" href="galeria/">Ver as fotos do evento</a>
+          <a class="btn ghost js-inscricao" href="#inscricoes">Inscrições a partir de 6/11</a>
           <a class="btn ghost js-whats" href="#" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.1L4 20z"/></svg>
             Entrar na comunidade
@@ -518,7 +520,7 @@ footer .fnj span b{display:inline;color:var(--accent);font-weight:700}
    Campo vazio aparece no site como "Em breve".
    ============================================================ */
 const CONFIG = {
-  atualizadoEm: "06/11/2026",
+  atualizadoEm: "16/11/2026",
   linkInscricao: "https://www.sympla.com.br/evento/iv-semana-da-psicologia-palestras-e-minicursos---osasco/3632043",          // link geral do Sympla
   linkSorteio: "https://forms.gle/NoJTKEVjrbartRSPA",            // link do Google Forms do sorteio do mini book
   linkYoutube: "",            // opcional: com link, aparece o botão "Assistir no YouTube"
@@ -531,9 +533,10 @@ const CONFIG = {
 
 /* Avisos: o mais recente primeiro. novo: true mostra o selo "Novo". */
 const AVISOS = [
-  { data: "06/11", novo: true, texto: "Inscrições abertas para as palestras de 12/11. Escolha uma atividade no Sympla até 10/11. Gratuito, 80 vagas por atividade." },
-  { data: "06/11", novo: true, texto: "Sorteio de um mini book de fotos. Retire o voucher durante o evento e preencha o formulário até 13/11, às 19h." },
-  { data: "06/11", novo: true, texto: "Camiseta, boné e caneca da Semana: pedidos até 9/11 pelo WhatsApp (11) 97103-8889." },
+  { data: "16/11", novo: true, texto: "Fotos de 12 e 13 de novembro publicadas, separadas por dia, sala e tema. Dá para baixar foto a foto ou a seção inteira.", link: "galeria/", rotulo: "Ver as fotos" },
+  { data: "06/11", texto: "Inscrições abertas para as palestras de 12/11. Escolha uma atividade no Sympla até 10/11. Gratuito, 80 vagas por atividade." },
+  { data: "06/11", texto: "Sorteio de um mini book de fotos. Retire o voucher durante o evento e preencha o formulário até 13/11, às 19h." },
+  { data: "06/11", texto: "Camiseta, boné e caneca da Semana: pedidos até 9/11 pelo WhatsApp (11) 97103-8889." },
   { data: "05/11", texto: "Kits: o pedido foi enviado por e-mail. Faça o pagamento até 6 de novembro e envie o comprovante para o WhatsApp indicado no final do e-mail." },
   { data: "05/11", texto: "Entrega dos kits na quinta-feira, 12 de novembro, às 17h." },
   { data: "05/11", texto: "Check-in nas salas às 19h. As atividades começam às 19h30." },
@@ -636,7 +639,7 @@ document.querySelector(".js-hora-abertura").innerHTML = CONFIG.horaAbertura ? es
 document.querySelector(".js-atualizado").textContent = "Atualizado em " + CONFIG.atualizadoEm;
 
 document.querySelector(".js-avisos").innerHTML = AVISOS.map(a =>
-  '<div class="aviso"><time>' + esc(a.data) + '</time><p>' + esc(a.texto) + (a.novo ? '<span class="novo">Novo</span>' : '') + '</p></div>').join("");
+  '<div class="aviso"><time>' + esc(a.data) + '</time><p>' + esc(a.texto) + (a.link ? ' <a href="' + esc(a.link) + '">' + esc(a.rotulo || "Abrir") + '</a>' : '') + (a.novo ? '<span class="novo">Novo</span>' : '') + '</p></div>').join("");
 
 document.querySelector(".js-abertura").innerHTML = ABERTURA.map(p =>
   '<article class="sp"><div class="sp-top">' + avatar(p) + '<div><span class="role">' + esc(p.papel) + '</span><h3>' + esc(p.nome) + '</h3></div></div><p>' + esc(p.bio) + '</p></article>').join("");
